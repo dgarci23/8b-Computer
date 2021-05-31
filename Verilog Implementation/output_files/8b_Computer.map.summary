@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon May 31 11:21:06 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : 8b_Computer
+Top-level Entity Name : Computer
+Family : Cyclone IV E
+Total logic elements : 4,072
+    Total combinational functions : 2,004
+    Dedicated logic registers : 2,101
+Total registers : 2101
+Total pins : 26
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

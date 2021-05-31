@@ -1,0 +1,616 @@
+Analysis & Synthesis report for 8b_Computer
+Mon May 31 11:21:06 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Mod0
+ 11. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div0
+ 12. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div1
+ 13. Port Connectivity Checks: "output_module:output_module|seven_seg:hundreds"
+ 14. Port Connectivity Checks: "output_module:output_module|seven_seg:tens"
+ 15. Port Connectivity Checks: "output_module:output_module|seven_seg:units"
+ 16. Port Connectivity Checks: "out_mux:out_mux"
+ 17. Port Connectivity Checks: "control_logic:control_logic"
+ 18. Port Connectivity Checks: "ALU_Register:ALU_Register|register_array:register_array"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon May 31 11:21:06 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; 8b_Computer                                 ;
+; Top-level Entity Name              ; Computer                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 4,072                                       ;
+;     Total combinational functions  ; 2,004                                       ;
+;     Dedicated logic registers      ; 2,101                                       ;
+; Total registers                    ; 2101                                        ;
+; Total pins                         ; 26                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; Computer           ; 8b_Computer        ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; register.v                       ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/register.v                 ;         ;
+; register_array.v                 ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/register_array.v           ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/ALU.v                      ;         ;
+; ALU_Register.v                   ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/ALU_Register.v             ;         ;
+; InstructionReg.v                 ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/InstructionReg.v           ;         ;
+; ProgramCounter.v                 ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/ProgramCounter.v           ;         ;
+; memory.v                         ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/memory.v                   ;         ;
+; address_reg.v                    ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/address_reg.v              ;         ;
+; flag_register.v                  ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/flag_register.v            ;         ;
+; Computer.v                       ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v                 ;         ;
+; seven_seg.v                      ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/seven_seg.v                ;         ;
+; output_reg.v                     ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_reg.v               ;         ;
+; output_module.v                  ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v            ;         ;
+; micro_instr.v                    ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/micro_instr.v              ;         ;
+; control_logic.v                  ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/control_logic.v            ;         ;
+; control_mem.v                    ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/control_mem.v              ;         ;
+; out_mux.v                        ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/out_mux.v                  ;         ;
+; signals.txt                      ; yes             ; Auto-Found File              ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/signals.txt                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                   ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                  ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc              ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                   ;         ;
+; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/lpm_divide_m9m.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/alt_u_div_a4f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/lpm_divide_jhm.tdf      ;         ;
+; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/lpm_divide_mhm.tdf      ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/sign_div_unsign_ekh.tdf ;         ;
+; db/alt_u_div_g4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/alt_u_div_g4f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 4,072 ;
+;                                             ;       ;
+; Total combinational functions               ; 2004  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 1533  ;
+;     -- 3 input functions                    ; 349   ;
+;     -- <=2 input functions                  ; 122   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1939  ;
+;     -- arithmetic mode                      ; 65    ;
+;                                             ;       ;
+; Total registers                             ; 2101  ;
+;     -- Dedicated logic registers            ; 2101  ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 26    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 2101  ;
+; Total fan-out                               ; 13740 ;
+; Average fan-out                             ; 3.31  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                   ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |Computer                                 ; 2004 (1)            ; 2101 (0)                  ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |Computer                                                                                                                             ; Computer            ; work         ;
+;    |ALU_Register:ALU_Register|            ; 26 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register                                                                                                   ; ALU_Register        ; work         ;
+;       |ALU:ALU|                           ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|ALU:ALU                                                                                           ; ALU                 ; work         ;
+;       |register_array:register_array|     ; 5 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|register_array:register_array                                                                     ; register_array      ; work         ;
+;          |register:registerA|             ; 2 (2)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|register_array:register_array|register:registerA                                                  ; register            ; work         ;
+;          |register:registerB|             ; 3 (3)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|register_array:register_array|register:registerB                                                  ; register            ; work         ;
+;    |InstructionReg:InstructionReg|        ; 6 (6)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|InstructionReg:InstructionReg                                                                                               ; InstructionReg      ; work         ;
+;    |ProgramCounter:ProgramCounter|        ; 24 (24)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ProgramCounter:ProgramCounter                                                                                               ; ProgramCounter      ; work         ;
+;    |control_logic:control_logic|          ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|control_logic:control_logic                                                                                                 ; control_logic       ; work         ;
+;       |control_mem:control_mem|           ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|control_logic:control_logic|control_mem:control_mem                                                                         ; control_mem         ; work         ;
+;    |flag_register:flag_reg|               ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|flag_register:flag_reg                                                                                                      ; flag_register       ; work         ;
+;    |memory:memory|                        ; 1645 (1642)         ; 2056 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory                                                                                                               ; memory              ; work         ;
+;       |address_reg:address_reg|           ; 3 (3)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|address_reg:address_reg                                                                                       ; address_reg         ; work         ;
+;    |micro_instr:micro_instr|              ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|micro_instr:micro_instr                                                                                                     ; micro_instr         ; work         ;
+;    |out_mux:out_mux|                      ; 82 (82)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|out_mux:out_mux                                                                                                             ; out_mux             ; work         ;
+;    |output_module:output_module|          ; 172 (0)             ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module                                                                                                 ; output_module       ; work         ;
+;       |lpm_divide:Div0|                   ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_jhm:auto_generated|  ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm      ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
+;                |alt_u_div_a4f:divider|    ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
+;       |lpm_divide:Div1|                   ; 25 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_mhm:auto_generated|  ; 25 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div1|lpm_divide_mhm:auto_generated                                                   ; lpm_divide_mhm      ; work         ;
+;             |sign_div_unsign_ekh:divider| ; 25 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div1|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider                       ; sign_div_unsign_ekh ; work         ;
+;                |alt_u_div_g4f:divider|    ; 25 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div1|lpm_divide_mhm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_g4f:divider ; alt_u_div_g4f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_m9m:auto_generated|  ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m      ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
+;                |alt_u_div_a4f:divider|    ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
+;       |output_reg:output_reg|             ; 15 (15)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|output_reg:output_reg                                                                           ; output_reg          ; work         ;
+;       |seven_seg:hundreds|                ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|seven_seg:hundreds                                                                              ; seven_seg           ; work         ;
+;       |seven_seg:tens|                    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|seven_seg:tens                                                                                  ; seven_seg           ; work         ;
+;       |seven_seg:units|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|seven_seg:units                                                                                 ; seven_seg           ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2101  ;
+; Number of registers using Synchronous Clear  ; 3     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2096  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Computer|InstructionReg:InstructionReg|instr[0]                                                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Computer|output_module:output_module|output_reg:output_reg|data_out[4]                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Computer|ALU_Register:ALU_Register|register_array:register_array|register:registerB|data_reg[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Computer|ALU_Register:ALU_Register|register_array:register_array|register:registerA|data_reg[0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Computer|memory:memory|address_reg:address_reg|addr[7]                                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Computer|ProgramCounter:ProgramCounter|PC[5]                                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Computer|ProgramCounter:ProgramCounter|PC[3]                                                    ;
+; 37:1               ; 4 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |Computer|out_mux:out_mux|Selector3                                                              ;
+; 38:1               ; 2 bits    ; 50 LEs        ; 14 LEs               ; 36 LEs                 ; No         ; |Computer|out_mux:out_mux|Selector5                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                               ;
++------------------------+----------------+----------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                            ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                     ;
++------------------------+----------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                               ;
++------------------------+----------------+----------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                            ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                     ;
++------------------------+----------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                               ;
++------------------------+----------------+----------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                            ;
+; LPM_WIDTHD             ; 7              ; Untyped                                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                            ;
+; CBXI_PARAMETER         ; lpm_divide_mhm ; Untyped                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                     ;
++------------------------+----------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "output_module:output_module|seven_seg:hundreds"                                                                                                                                   ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in   ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "output_module:output_module|seven_seg:tens"                                                                                                                                       ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in   ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "output_module:output_module|seven_seg:units"                                                                                                                                      ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in   ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "out_mux:out_mux"                                                                                                                                                                        ;
++-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                           ;
++-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; out_signals ; Input ; Warning  ; Input port expression (13 bits) is wider than the input port (6 bits) it drives.  The 7 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "control_logic:control_logic"                                                              ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; signals[3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; signals[1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_Register:ALU_Register|register_array:register_array"                           ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; bus  ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 26                          ;
+; cycloneiii_ff         ; 2101                        ;
+;     ENA               ; 2096                        ;
+;     SCLR              ; 3                           ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 2008                        ;
+;     arith             ; 65                          ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 46                          ;
+;     normal            ; 1943                        ;
+;         0 data inputs ; 13                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 89                          ;
+;         3 data inputs ; 303                         ;
+;         4 data inputs ; 1533                        ;
+;                       ;                             ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 9.62                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Mon May 31 11:20:45 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8b_Computer -c 8b_Computer
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file clk.v
+    Info (12023): Found entity 1: clk File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/clk.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file register.v
+    Info (12023): Found entity 1: register File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/register.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_array.v
+    Info (12023): Found entity 1: register_array File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/register_array.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/ALU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_register.v
+    Info (12023): Found entity 1: ALU_Register File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/ALU_Register.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file instructionreg.v
+    Info (12023): Found entity 1: InstructionReg File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/InstructionReg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file programcounter.v
+    Info (12023): Found entity 1: ProgramCounter File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/ProgramCounter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memory.v
+    Info (12023): Found entity 1: memory File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/memory.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file address_reg.v
+    Info (12023): Found entity 1: address_reg File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/address_reg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flag_register.v
+    Info (12023): Found entity 1: flag_register File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/flag_register.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file computer.v
+    Info (12023): Found entity 1: Computer File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file seven_seg.v
+    Info (12023): Found entity 1: seven_seg File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/seven_seg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_reg.v
+    Info (12023): Found entity 1: output_reg File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_reg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_module.v
+    Info (12023): Found entity 1: output_module File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file micro_instr.v
+    Info (12023): Found entity 1: micro_instr File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/micro_instr.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file control_logic.v
+    Info (12023): Found entity 1: control_logic File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/control_logic.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file control_mem.v
+    Info (12023): Found entity 1: control_mem File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/control_mem.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file out_mux.v
+    Info (12023): Found entity 1: out_mux File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/out_mux.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Computer.v(38): created implicit net for "rst" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 38
+Info (12127): Elaborating entity "Computer" for the top level hierarchy
+Info (12128): Elaborating entity "ALU_Register" for hierarchy "ALU_Register:ALU_Register" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 57
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU_Register:ALU_Register|ALU:ALU" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/ALU_Register.v Line: 33
+Info (12128): Elaborating entity "register_array" for hierarchy "ALU_Register:ALU_Register|register_array:register_array" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/ALU_Register.v Line: 47
+Info (12128): Elaborating entity "register" for hierarchy "ALU_Register:ALU_Register|register_array:register_array|register:registerA" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/register_array.v Line: 22
+Info (12128): Elaborating entity "memory" for hierarchy "memory:memory" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 67
+Info (12128): Elaborating entity "address_reg" for hierarchy "memory:memory|address_reg:address_reg" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/memory.v Line: 21
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:ProgramCounter" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 77
+Warning (10230): Verilog HDL assignment warning at ProgramCounter.v(24): truncated value with size 32 to match size of target (8) File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/ProgramCounter.v Line: 24
+Info (12128): Elaborating entity "InstructionReg" for hierarchy "InstructionReg:InstructionReg" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 87
+Info (12128): Elaborating entity "micro_instr" for hierarchy "micro_instr:micro_instr" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 94
+Warning (10230): Verilog HDL assignment warning at micro_instr.v(16): truncated value with size 32 to match size of target (3) File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/micro_instr.v Line: 16
+Info (12128): Elaborating entity "flag_register" for hierarchy "flag_register:flag_reg" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 105
+Info (12128): Elaborating entity "control_logic" for hierarchy "control_logic:control_logic" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 114
+Info (12128): Elaborating entity "control_mem" for hierarchy "control_logic:control_logic|control_mem:control_mem" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/control_logic.v Line: 18
+Warning (10030): Net "content.data_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/control_mem.v Line: 6
+Warning (10030): Net "content.waddr_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/control_mem.v Line: 6
+Warning (10030): Net "content.we_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/control_mem.v Line: 6
+Info (12128): Elaborating entity "out_mux" for hierarchy "out_mux:out_mux" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 126
+Info (10264): Verilog HDL Case Statement information at out_mux.v(15): all case item expressions in this case statement are onehot File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/out_mux.v Line: 15
+Info (12128): Elaborating entity "output_module" for hierarchy "output_module:output_module" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 138
+Info (12128): Elaborating entity "output_reg" for hierarchy "output_module:output_module|output_reg:output_reg" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 22
+Info (12128): Elaborating entity "seven_seg" for hierarchy "output_module:output_module|seven_seg:units" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 27
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "control_logic:control_logic|control_mem:control_mem|content" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/control_mem.v Line: 6
+    Info (276007): RAM logic "memory:memory|mem_array" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/memory.v Line: 23
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer control_logic:control_logic|control_mem:control_mem|content~0 File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/control_mem.v Line: 6
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Mod0" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 25
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Div0" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 30
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Div1" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 35
+Info (12130): Elaborated megafunction instantiation "output_module:output_module|lpm_divide:Mod0" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 25
+Info (12133): Instantiated megafunction "output_module:output_module|lpm_divide:Mod0" with the following parameter: File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 25
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m9m.tdf
+    Info (12023): Found entity 1: lpm_divide_m9m File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/lpm_divide_m9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/sign_div_unsign_bkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
+    Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "output_module:output_module|lpm_divide:Div0" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 30
+Info (12133): Instantiated megafunction "output_module:output_module|lpm_divide:Div0" with the following parameter: File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 30
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
+    Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/lpm_divide_jhm.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "output_module:output_module|lpm_divide:Div1" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 35
+Info (12133): Instantiated megafunction "output_module:output_module|lpm_divide:Div1" with the following parameter: File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/output_module.v Line: 35
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mhm.tdf
+    Info (12023): Found entity 1: lpm_divide_mhm File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/lpm_divide_mhm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/sign_div_unsign_ekh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g4f.tdf
+    Info (12023): Found entity 1: alt_u_div_g4f File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/db/alt_u_div_g4f.tdf Line: 27
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 3
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 3
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/david/Desktop/8-Bit Computer/Verilog Implementation/Computer.v Line: 3
+Info (21057): Implemented 4114 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 4088 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4802 megabytes
+    Info: Processing ended: Mon May 31 11:21:06 2021
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:39
+
+
