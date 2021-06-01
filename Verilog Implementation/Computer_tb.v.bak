@@ -1,0 +1,11 @@
+module Computer_tb ();
+
+	reg clk;
+	reg [3:0] key;
+	reg rst = key[0];
+	
+	wire [6:0] HEX0;
+	wire [6:0] HEX1;
+	wire [6:0] HEX2;
+	
+	

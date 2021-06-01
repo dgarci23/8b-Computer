@@ -1,13 +1,12 @@
 module register_array(
+	// System Inputs
 	input clk,
 	input rst,
-
-	inout [7:0] bus,
-	
+	// Values in
+	input [7:0] bus,
 	// Control signals registers
 	input AI,
 	input BI,
-	
 	// ALU register connection
 	output [7:0] A,
 	output [7:0] B

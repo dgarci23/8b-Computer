@@ -1,20 +1,17 @@
 module ALU_Register (
+	// System Signals
 	input clk,
 	input rst,
-	
+	// Values In
 	input [7:0] bus,
-	
 	// Control signals registers
 	input AI,
 	input BI,
-	
 	input SUB,
-	
 	// Flags
 	output CARRY,
-	output ZERO,
-	
-	// Output
+	output ZERO,	
+	// Output Values
 	output [7:0] A_out,
 	output [7:0] B_out,
 	output [7:0] E_out

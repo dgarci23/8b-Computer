@@ -1,13 +1,11 @@
 module ALU (
+	// Registers In
 	input [7:0] A,
 	input [7:0] B,
-	
 	// Control signals
 	input SUB,
-	
-	// Values
+	// Values Out
 	output [7:0] data_out,
-	
 	// Flags
 	output ZERO,
 	output reg CARRY

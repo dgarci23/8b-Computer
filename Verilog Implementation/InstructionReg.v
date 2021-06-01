@@ -1,14 +1,18 @@
 module InstructionReg(
+	// System Inputs
 	input clk,
-	
-	input II,
 	input rst,
+	// Control Signals
+	input II,
+	// Values In/Out
 	input [7:0] bus,
 	output [3:0] opcode,
 	output [7:0] instr_out
 	);
 	
 	reg [7:0] instr;
+	
+	initial begin instr = 0; end
 	
 	
 	always @(posedge clk) 

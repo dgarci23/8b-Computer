@@ -1,4 +1,5 @@
 module memory (
+	// System Inputs
 	input clk,
 	input rst,
 	// Control Signals
@@ -10,7 +11,7 @@ module memory (
 	output [7:0] mem_out
 	);
 	
-	wire [7:0] addr;
+	wire [3:0] addr;
 	
 	address_reg address_reg(
 		.bus(bus),
@@ -20,7 +21,15 @@ module memory (
 		.addr(addr)
 	);
 	
-	reg [7:0] mem_array [0:255];
+	reg [7:0] mem_array [0:15];
+	
+	initial begin
+		mem_array[0] = 8'b00011000;
+		mem_array[1] = 8'b00101000;
+		mem_array[2] = 8'b11100000;
+		mem_array[3] = 8'b11110000;
+		mem_array[8] = 8'b00000001;
+	end
 	
 	always @(posedge clk)
 		begin

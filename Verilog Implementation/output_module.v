@@ -1,10 +1,11 @@
 module output_module (
-	inout [7:0] bus,
-	// Control Signals
-	input OI,
 	// System Signals
 	input clk,
 	input rst,
+	// Inputs
+	inout [7:0] bus,
+	// Control Signals
+	input OI,
 	// Output
 	output [6:0] u,
 	output [6:0] t,

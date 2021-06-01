@@ -1,8 +1,10 @@
 module register(
+	// System Inputs
 	input clk,
-	
-	input input_en,
 	input rst,
+	// Control Signals
+	input input_en,
+	// Values In/Out
 	input [7:0] bus,
 	output reg [7:0] data_reg
 	);

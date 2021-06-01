@@ -1,7 +1,9 @@
 module output_reg (
-	inout [7:0] bus,
+	// System Inputs
 	input clk,
 	input rst,
+	// Inputs
+	inout [7:0] bus,
 	// Control signals
 	input OI,
 	// Output

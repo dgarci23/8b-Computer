@@ -1,13 +1,16 @@
 module address_reg (
+	// System Inputs
+	input rst,
+	input clk,
+	// Values In
 	input [7:0] bus,
 	// Control Signals
 	input MI,
-	// Clock and Reset
-	input rst,
-	input clk,
 	// Outputs
-	output reg [7:0] addr
+	output reg [3:0] addr
 	);
+	
+	initial begin addr = 0; end
 	
 	always @(posedge clk)
 		begin
@@ -15,7 +18,7 @@ module address_reg (
 				addr <= 0;
 			else
 				if (MI)
-					addr <= bus;
+					addr <= bus[3:0];
 		end
 
 endmodule			

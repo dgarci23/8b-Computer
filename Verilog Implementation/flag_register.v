@@ -1,4 +1,5 @@
 module flag_register(
+	// System Inputs
 	input clk,
 	input rst,
 	// Control Signals
@@ -10,6 +11,8 @@ module flag_register(
 	output reg FZ,
 	output reg FC
 	);
+	
+	initial begin FZ = 0; FC = 0; end
 	
 	always @(posedge clk) 
 		begin

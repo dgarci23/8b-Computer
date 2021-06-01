@@ -1,0 +1,448 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/david/Desktop/8b-Computer/Verilog Implementation/simulation/modelsim
+vaddress_reg
+!s110 1622494982
+!i10b 1
+!s100 70N<edVQg=U6Cj6Q6hPML3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I^7JT4V[26lV0EgPob6UFi0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1622494971
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v
+!i122 21
+L0 1 23
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1622494982.000000
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work {+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation}
+Z6 tCvgOpt 0
+vALU
+Z7 !s110 1622492868
+!i10b 1
+!s100 _lGg94RlS<lkY?^C]>K0@1
+R1
+In:<>JzmicIPZ`zG13aBY33
+R2
+R0
+w1622472252
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU.v
+!i122 2
+L0 1 31
+R3
+r1
+!s85 0
+31
+Z8 !s108 1622492868.000000
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU.v|
+!i113 1
+R4
+R5
+R6
+n@a@l@u
+vALU_Register
+R7
+!i10b 1
+!s100 eWEK8XTG23^KK7C>[EjRM3
+R1
+I;7c29>UfQZGfU_[?aJOIX2
+R2
+R0
+w1622473164
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v
+!i122 3
+L0 1 50
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v|
+!i113 1
+R4
+R5
+R6
+n@a@l@u_@register
+vComputer
+!s110 1622495520
+!i10b 1
+!s100 k7j22EI4We]Wh8_TnOOkX1
+R1
+IUBfOlNZG2Cd=n;oJo3K3H0
+R2
+R0
+w1622495503
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v
+!i122 23
+L0 1 140
+R3
+r1
+!s85 0
+31
+!s108 1622495520.000000
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v|
+!i113 1
+R4
+R5
+R6
+n@computer
+vComputer_tb
+!s110 1622495773
+!i10b 1
+!s100 85FlKz9[48JMO45ZhY@::1
+R1
+II0_f2bK7fF8Y[S9`[BODo0
+R2
+R0
+w1622495765
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v
+!i122 25
+L0 2 27
+R3
+r1
+!s85 0
+31
+!s108 1622495773.000000
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v|
+!i113 1
+o-work work
+R6
+n@computer_tb
+vcontrol_logic
+Z9 !s110 1622492872
+!i10b 1
+!s100 Lan`nNTIdYkZ7cmaXGAMY2
+R1
+IN^IkRlA=@Fn6en@Ae18[m3
+R2
+R0
+w1622394881
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_logic.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_logic.v
+!i122 14
+Z10 L0 1 21
+R3
+r1
+!s85 0
+31
+Z11 !s108 1622492872.000000
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_logic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_logic.v|
+!i113 1
+R4
+R5
+R6
+vcontrol_mem
+R9
+!i10b 1
+!s100 L@c9GW?m`CBibi5lZXzjR1
+R1
+I?lgaW1:kDMjZJ_1`6;c:e3
+R2
+R0
+w1622491553
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v
+!i122 16
+L0 1 15
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v|
+!i113 1
+R4
+R5
+R6
+vflag_register
+Z12 !s110 1622492870
+!i10b 1
+!s100 n;PK>eMFAODf9:H>@oYGn3
+R1
+I]W2DmOdhhm1KP=0gn6?DW2
+R2
+R0
+w1622490712
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/flag_register.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/flag_register.v
+!i122 8
+L0 1 28
+R3
+r1
+!s85 0
+31
+Z13 !s108 1622492870.000000
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/flag_register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/flag_register.v|
+!i113 1
+R4
+R5
+R6
+vInstructionReg
+Z14 !s110 1622492869
+!i10b 1
+!s100 1]397bYP9<22AF<ZBLL1e1
+R1
+I?H809zJ4TFKF4YgYn^8dn3
+R2
+R0
+w1622489845
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/InstructionReg.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/InstructionReg.v
+!i122 4
+L0 1 29
+R3
+r1
+!s85 0
+31
+Z15 !s108 1622492869.000000
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/InstructionReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/InstructionReg.v|
+!i113 1
+R4
+R5
+R6
+n@instruction@reg
+vmemory
+!s110 1622495689
+!i10b 1
+!s100 IG7;N:zg:Y[:Xn7^O;^<d0
+R1
+IYW=^g7FCe@Cd?;8eEUeX41
+R2
+R0
+w1622495673
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v
+!i122 24
+L0 1 41
+R3
+r1
+!s85 0
+31
+!s108 1622495689.000000
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v|
+!i113 1
+R4
+R5
+R6
+vmicro_instr
+Z16 !s110 1622492871
+!i10b 1
+!s100 j?3C01XjXGD7jQEXEhN?O2
+R1
+IXOXH=0?=[AgUN_C7Z1Fzk1
+R2
+R0
+w1622489555
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/micro_instr.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/micro_instr.v
+!i122 13
+R10
+R3
+r1
+!s85 0
+31
+Z17 !s108 1622492871.000000
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/micro_instr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/micro_instr.v|
+!i113 1
+R4
+R5
+R6
+vout_mux
+R9
+!i10b 1
+!s100 L:SENbXBTcgkAUzakKm_S0
+R1
+IdfJB990YLWZoe3bR8_ikW3
+R2
+R0
+w1622476409
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v
+!i122 15
+Z18 L0 1 39
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v|
+!i113 1
+R4
+R5
+R6
+voutput_module
+R16
+!i10b 1
+!s100 ^KNPY_L;1i0V3X78`3CC32
+R1
+IlT4RCKoj^cI2TTRgzE53X0
+R2
+R0
+w1622396955
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v
+!i122 12
+R18
+R3
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v|
+!i113 1
+R4
+R5
+R6
+voutput_reg
+R16
+!i10b 1
+!s100 ]MDU07d;dYZY8_Z]YLKg60
+R1
+IlQ=j[cFb7bEFZXW:^S?he2
+R2
+R0
+w1622396978
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_reg.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_reg.v
+!i122 11
+Z19 L0 1 22
+R3
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_reg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_reg.v|
+!i113 1
+R4
+R5
+R6
+vProgramCounter
+R14
+!i10b 1
+!s100 E]48AFKz3o[z2]7^lCR<M2
+R1
+Io=9X87Z<k<cdFRKOhP9`^2
+R2
+R0
+w1622491933
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ProgramCounter.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/ProgramCounter.v
+!i122 5
+Z20 L0 1 32
+R3
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ProgramCounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ProgramCounter.v|
+!i113 1
+R4
+R5
+R6
+n@program@counter
+vregister
+!s110 1622492867
+!i10b 1
+!s100 :9T1]UECTFkWeeiVSChJh2
+R1
+IA11n3L8GX21`T3SO>AQ3[3
+R2
+R0
+w1622472162
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/register.v
+!i122 0
+R19
+R3
+r1
+!s85 0
+31
+!s108 1622492867.000000
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register.v|
+!i113 1
+R4
+R5
+R6
+vregister_array
+R7
+!i10b 1
+!s100 e7hmE^Y]l:QB@D87>@;>>3
+R1
+I[Yen;8R6C7j8H4hzolk`21
+R2
+R0
+w1622472205
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register_array.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/register_array.v
+!i122 1
+R20
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register_array.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register_array.v|
+!i113 1
+R4
+R5
+R6
+vseven_seg
+R12
+!i10b 1
+!s100 kW]BJlaL:kAg2]^ig3HgK0
+R1
+IbPz@[0@nY`NHB[SNT7fPK2
+R2
+R0
+w1622383847
+8C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v
+FC:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v
+!i122 10
+L0 1 25
+R3
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation|C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v|
+!i113 1
+R4
+R5
+R6

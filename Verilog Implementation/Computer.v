@@ -1,3 +1,15 @@
+/********************************************************** 
+
+This is the main Computer module, it combines all the other 
+modules.
+
+Important Things:
+	* Program is stored in memory.v
+	* Logic stored in control_mem.v and signals.txt
+
+
+**********************************************************/
+
 module Computer(
 	input CLOCK_50,
 	input [3:0] KEY,
@@ -39,11 +51,12 @@ module Computer(
 	
 	// Registers and ALU
 	ALU_Register ALU_Register (
+		// System Inputs
 		.clk(clk),
 		.rst(rst),
-		
+		// Inputs
 		.bus(bus),
-		
+		// Control Signals
 		.AI(AI),
 		.BI(BI),
 		.SUB(SUB),
@@ -58,80 +71,108 @@ module Computer(
 	
 	// Memory
 	memory memory (
+		// System Inputs
 		.clk(clk),
 		.rst(rst),
+		// Control Signals
 		.WE(WE),
 		.MI(MI),
+		// Inputs
 		.bus(bus),
+		// Outputs
 		.mem_out(mem_out)
 	);
 	
 	// Program Counter
 	ProgramCounter ProgramCounter (
+		// System Inputs
 		.clk(clk),
+		.rst(rst),
+		// Control Signals
 		.CE(CE),
 		.J(J),
+		// Input
 		.bus(bus[3:0]),
-		.rst(rst),
+		// Output
 		.PC(PC)
 	);
 	
 	// Instruction Register
 	InstructionReg InstructionReg (
+		// System Inputs
 		.clk(clk),
 		.rst(rst),
+		// Control Signals
 		.II(II),
+		// Inputs
 		.bus(bus),
+		// Outputs
 		.opcode(opcode),
 		.instr_out(instr_out)
 	);
 	
 	// Microinstructions
 	micro_instr micro_instr (
+		// System Inputs
 		.clk(clk),
 		.rst(rst),
+		// Output
 		.micro(micro)
 	);
 	
 	// Flag Register
 	flag_register flag_reg (
+		// System Inputs
 		.clk(clk),
 		.rst(rst),
+		// Control Signals
 		.FI(FI),
+		// Inputs
 		.CARRY_Z(ZERO),
 		.CARRY_C(CARRY),
+		// Outputs - Flags
 		.FZ(FZ),
 		.FC(FC)
 	);
 	
 	// Control Signal Control
 	control_logic control_logic(
+		// Flags
 		.FZ(FZ),
 		.FC(FC),
+		// Instruction
 		.opcode(opcode),
 		.micro(micro),
+		// Signals - Output
 		.signals({HLT, WE, OE, MI, AI, BI, AO, BO, EO, SUB, OI, CE, J, CO, II, IO, FI})
 	);
 	
 	// Output Control
 	out_mux out_mux (
-		.out_signals({IO, PC, EO, BO, AO, OE}),
+		// Output Control Signals
+		.out_signals({IO, CO, EO, BO, AO, OE}),
+		// Output Signals
 		.A_out(A_out),
 		.B_out(B_out),
 		.E_out(E_out),
 		.mem_out(mem_out),
 		.PC(PC),
 		.instr_out(instr_out),
+		// Selected signal in the bus
 		.sel_signal(bus)
 	);
 		
 	
 	// Output Module
 	output_module output_module (
-		.bus(bus),
-		.OI(OI),
+		// System Inputs
 		.clk(clk),
 		.rst(rst),
+		// Inputs
+		.bus(bus),
+		// Control Signals
+		.OI(OI),
+		// Seven segment display
 		.u(HEX0),
 		.t(HEX1),
 		.h(HEX2)

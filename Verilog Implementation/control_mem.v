@@ -5,11 +5,11 @@ module control_mem (
 	
 	reg [16:0] content [0:511];
 	
-	initial $readmemb("signals.txt", content);
+	initial $readmemb("C:/Users/david/Desktop/8b-Computer/Verilog Implementation/signals.txt", content);
 	
 	always @(*)
 		begin
-			data_out = content[addr];
+			data_out <= content[addr];
 		end
 
 endmodule
