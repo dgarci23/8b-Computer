@@ -12,7 +12,8 @@ module register(
 	
 	initial begin data_reg = 0; end
 	
-	always @(posedge clk) 
+	
+	always @(posedge clk or posedge rst) 
 		begin	
 			if (rst)
 				data_reg <= 0;

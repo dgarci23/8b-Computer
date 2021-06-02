@@ -28,7 +28,7 @@ module output_module (
 	);
 	
 	seven_seg tens (
-		.in(num/10),
+		.in((num/10)%10),
 		.out(t)
 	);
 	

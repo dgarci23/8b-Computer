@@ -39,7 +39,7 @@ void opcode(long int code, int pos, int address) {
   }
 
   writeEEPROM_DSP(address<<1, opcode);
-  
+
 }
 
 void writeInstructions(int pos) {
@@ -51,43 +51,43 @@ void writeInstructions(int pos) {
       opcode(CO|MI, pos, (flag<<7)|(mask << 3));
       opcode(OE|CE|II, pos, (flag<<7)|(mask << 3)|1);
     }
-    
-    // NP
+
+    // NP 0000
     opcode(0, pos, (flag<<7)|0b0000010);
     opcode(0, pos, (flag<<7)|0b0000011);
     opcode(0, pos, (flag<<7)|0b0000100);
-  
-    // LDA
+
+    // LDA 0001
     opcode(MI|IO, pos, (flag<<7)|0b0001010);
-    opcode(OE|AI, pos, (flag<<7)|0b0001011); 
+    opcode(OE|AI, pos, (flag<<7)|0b0001011);
     opcode(0, pos, (flag<<7)|0b0001100);
-  
-    // ADD
+
+    // ADD 0010
     opcode(MI|IO, pos, (flag<<7)|0b0010010);
     opcode(OE|BI, pos, (flag<<7)|0b0010011);
     opcode(AI|EO|FI, pos, (flag<<7)|0b0010100);
-  
-    // SUB
+
+    // SUB 0011
     opcode(MI|IO, pos, (flag<<7)|0b0011010);
     opcode(OE|BI, pos, (flag<<7)|0b0011011);
     opcode(AI|EO|FI, pos, (flag<<7)|0b0011100);
-  
-    // STA
+
+    // STA 0100
     opcode(MI|IO, pos, (flag<<7)|0b0100010);
     opcode(AO|WE, pos, (flag<<7)|0b0100011);
     opcode(0, pos, (flag<<7)|0b0100100);
-  
-    // LDI
+
+    // LDI 0101
     opcode(IO|AI, pos, (flag<<7)|0b0101010);
     opcode(0, pos, (flag<<7)|0b0101011);
     opcode(0, pos, (flag<<7)|0b0101100);
-  
-    // JMP
+
+    // JMP 0110
     opcode(IO|J, pos, (flag<<7)|0b0110010);
     opcode(0, pos, (flag<<7)|0b0110011);
     opcode(0, pos, (flag<<7)|0b0110100);
 
-    // JC
+    // JC 0111
     if (flag|0b01 == 0b01) {
       opcode(0,    pos, (flag<<7)|0b0111010);
     } else if (flag&0b10 == 0b10) {
@@ -104,12 +104,12 @@ void writeInstructions(int pos) {
     }
     opcode(0, pos, (flag<<7)|0b1000011);
     opcode(0, pos, (flag<<7)|0b1000100);
-  
+
     // OUT
     opcode(AO|OI, pos, (flag<<7)|0b1110010);
     opcode(0, pos, (flag<<7)|0b1110011);
     opcode(0, pos, (flag<<7)|0b1110100);
-  
+
     // HLT
     opcode(HLT, pos, (flag<<7)|0b1111010);
     opcode(0, pos, (flag<<7)|0b1111011);

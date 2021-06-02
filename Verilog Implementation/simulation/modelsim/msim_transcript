@@ -12,190 +12,211 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:47 on May 31,2021
+# Start time: 17:04:13 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 15:27:47 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:14 on Jun 01,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register_array.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:48 on May 31,2021
+# Start time: 17:04:14 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register_array.v 
 # -- Compiling module register_array
 # 
 # Top level modules:
 # 	register_array
-# End time: 15:27:48 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:14 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:48 on May 31,2021
+# Start time: 17:04:14 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 15:27:48 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:14 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:48 on May 31,2021
+# Start time: 17:04:14 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v 
 # -- Compiling module ALU_Register
 # 
 # Top level modules:
 # 	ALU_Register
-# End time: 15:27:48 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:14 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/InstructionReg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:49 on May 31,2021
+# Start time: 17:04:14 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/InstructionReg.v 
 # -- Compiling module InstructionReg
 # 
 # Top level modules:
 # 	InstructionReg
-# End time: 15:27:49 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:14 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ProgramCounter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:49 on May 31,2021
+# Start time: 17:04:14 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ProgramCounter.v 
 # -- Compiling module ProgramCounter
 # 
 # Top level modules:
 # 	ProgramCounter
-# End time: 15:27:49 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:15 on Jun 01,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:49 on May 31,2021
+# Start time: 17:04:15 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v 
 # -- Compiling module memory
 # 
 # Top level modules:
 # 	memory
-# End time: 15:27:50 on May 31,2021, Elapsed time: 0:00:01
+# End time: 17:04:15 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:50 on May 31,2021
+# Start time: 17:04:19 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v 
 # -- Compiling module address_reg
 # 
 # Top level modules:
 # 	address_reg
-# End time: 15:27:50 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:20 on Jun 01,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/flag_register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:50 on May 31,2021
+# Start time: 17:04:20 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/flag_register.v 
 # -- Compiling module flag_register
 # 
 # Top level modules:
 # 	flag_register
-# End time: 15:27:50 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:20 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:50 on May 31,2021
+# Start time: 17:04:20 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v 
 # -- Compiling module Computer
 # 
 # Top level modules:
 # 	Computer
-# End time: 15:27:50 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:20 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:50 on May 31,2021
+# Start time: 17:04:20 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v 
 # -- Compiling module seven_seg
 # 
 # Top level modules:
 # 	seven_seg
-# End time: 15:27:50 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:21 on Jun 01,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_reg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:51 on May 31,2021
+# Start time: 17:04:21 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_reg.v 
 # -- Compiling module output_reg
 # 
 # Top level modules:
 # 	output_reg
-# End time: 15:27:51 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:21 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:51 on May 31,2021
+# Start time: 17:04:21 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v 
 # -- Compiling module output_module
 # 
 # Top level modules:
 # 	output_module
-# End time: 15:27:51 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:21 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/micro_instr.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:51 on May 31,2021
+# Start time: 17:04:21 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/micro_instr.v 
 # -- Compiling module micro_instr
 # 
 # Top level modules:
 # 	micro_instr
-# End time: 15:27:52 on May 31,2021, Elapsed time: 0:00:01
+# End time: 17:04:22 on Jun 01,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_logic.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:52 on May 31,2021
+# Start time: 17:04:22 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_logic.v 
 # -- Compiling module control_logic
 # 
 # Top level modules:
 # 	control_logic
-# End time: 15:27:52 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:22 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:52 on May 31,2021
+# Start time: 17:04:22 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v 
 # -- Compiling module out_mux
 # 
 # Top level modules:
 # 	out_mux
-# End time: 15:27:52 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:22 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/clk_module.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:04:22 on Jun 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/clk_module.v 
+# -- Compiling module clk_module
+# 
+# Top level modules:
+# 	clk_module
+# End time: 17:04:22 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/david/Desktop/8b-Computer/Verilog\ Implementation {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:27:52 on May 31,2021
+# Start time: 17:04:22 on Jun 01,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v 
 # -- Compiling module control_mem
 # 
 # Top level modules:
 # 	control_mem
-# End time: 15:27:52 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:23 on Jun 01,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 vlog -reportprogress 300 -work work {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:28:24 on May 31,2021
+# Start time: 17:04:34 on Jun 01,2021
 # vlog -reportprogress 300 -work work C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v 
 # -- Compiling module Computer_tb
 # 
 # Top level modules:
 # 	Computer_tb
-# End time: 15:28:24 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:04:34 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:04:35 on Jun 01,2021
+# vlog -reportprogress 300 -work work C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v 
+# -- Compiling module Computer_tb
+# 
+# Top level modules:
+# 	Computer_tb
+# End time: 17:04:35 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.Computer_tb
 # vsim work.Computer_tb 
-# Start time: 15:28:34 on May 31,2021
+# Start time: 17:04:40 on Jun 01,2021
 # Loading work.Computer_tb
 # Loading work.Computer
+# Loading work.clk_module
 # Loading work.ALU_Register
 # Loading work.ALU
 # Loading work.register_array
@@ -212,360 +233,189 @@ vsim work.Computer_tb
 # Loading work.output_module
 # Loading work.output_reg
 # Loading work.seven_seg
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
 # ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 25
 # ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 30
 # ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-add wave -position end  sim:/Computer_tb/clk
-add wave -position end  sim:/Computer_tb/uut/HLT
-add wave -position end  sim:/Computer_tb/uut/PC
-add wave -position end  sim:/Computer_tb/uut/bus
-add wave -position end  sim:/Computer_tb/uut/HLT
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position end  sim:/Computer_tb/uut/micro
-add wave -position end  sim:/Computer_tb/uut/opcode
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position end  sim:/Computer_tb/uut/ALU_Register/clk
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position end  sim:/Computer_tb/uut/control_logic/signals
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position end  sim:/Computer_tb/uut/MI
-add wave -position end  sim:/Computer_tb/uut/CO
-add wave -position end  sim:/Computer_tb/uut/memory/mem_out
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position end  sim:/Computer_tb/uut/ALU_Register/A_out
-add wave -position end  sim:/Computer_tb/uut/ALU_Register/B_out
-add wave -position end  sim:/Computer_tb/uut/ALU_Register/E_out
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position end  sim:/Computer_tb/uut/InstructionReg/instr
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-vlog -work work {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:50:06 on May 31,2021
-# vlog -reportprogress 300 -work work C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v 
-# -- Compiling module Computer_tb
-# 
-# Top level modules:
-# 	Computer_tb
-# End time: 15:50:06 on May 31,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.Computer_tb
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position 9  sim:/Computer_tb/uut/memory/addr
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-vlog -vlog01compat -work work {+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation} {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:56:38 on May 31,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v 
-# -- Compiling module memory
-# 
-# Top level modules:
-# 	memory
-# End time: 15:56:38 on May 31,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -vlog01compat -work work {+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation} {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:56:42 on May 31,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v 
-# -- Compiling module memory
-# 
-# Top level modules:
-# 	memory
-# End time: 15:56:43 on May 31,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.memory
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position end  sim:/Computer_tb/uut/output_module/num
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position 9  sim:/Computer_tb/uut/IO
-vlog -vlog01compat -work work {+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation} {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:03:02 on May 31,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v 
-# -- Compiling module address_reg
-# 
-# Top level modules:
-# 	address_reg
-# End time: 16:03:02 on May 31,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.address_reg
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (8) for port 'addr'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v(9).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/memory/address_reg File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 15
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-vlog -vlog01compat -work work {+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation} {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:04:39 on May 31,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v 
-# -- Compiling module memory
-# 
-# Top level modules:
-# 	memory
-# End time: 16:04:39 on May 31,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.memory
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position 10  sim:/Computer_tb/uut/InstructionReg/instr_out
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position 9  sim:/Computer_tb/uut/out_mux/sel_signal
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (13) for port 'out_signals'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 117
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 35
+add wave -position insertpoint  \
+sim:/Computer_tb/uut/clk
+add wave -position insertpoint  \
+sim:/Computer_tb/uut/A_out
 run
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-add wave -position 9  sim:/Computer_tb/uut/out_mux/out_signals
-vlog -vlog01compat -work work {+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation} {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:12:00 on May 31,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v 
-# -- Compiling module Computer
-# 
-# Top level modules:
-# 	Computer
-# End time: 16:12:00 on May 31,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.Computer
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
 run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-vlog -vlog01compat -work work {+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation} {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:49 on May 31,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v 
-# -- Compiling module memory
-# 
-# Top level modules:
-# 	memory
-# End time: 16:14:49 on May 31,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.memory
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
-run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 100 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
+# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(33)
+#    Time: 10029 ns  Iteration: 0  Instance: /Computer_tb
+# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 33
 vlog -work work {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:16:13 on May 31,2021
+# Start time: 17:06:28 on Jun 01,2021
 # vlog -reportprogress 300 -work work C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v 
 # -- Compiling module Computer_tb
 # 
 # Top level modules:
 # 	Computer_tb
-# End time: 16:16:13 on May 31,2021, Elapsed time: 0:00:00
+# End time: 17:06:28 on Jun 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.Computer_tb
 # ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 24
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 25
 # ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 29
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 30
 # ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
-#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 34
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 35
 run -all
-# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(25)
-#    Time: 160 ns  Iteration: 0  Instance: /Computer_tb
-# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 25
-# End time: 17:14:55 on May 31,2021, Elapsed time: 1:46:21
+# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(28)
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb
+# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 28
+run -all
+vlog -work work {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:07:02 on Jun 01,2021
+# vlog -reportprogress 300 -work work C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v 
+# -- Compiling module Computer_tb
+# 
+# Top level modules:
+# 	Computer_tb
+# End time: 17:07:02 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Computer_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 35
+run -all
+# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(29)
+#    Time: 10 us  Iteration: 0  Instance: /Computer_tb
+# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 29
+vlog -work work {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:07:23 on Jun 01,2021
+# vlog -reportprogress 300 -work work C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v 
+# -- Compiling module Computer_tb
+# 
+# Top level modules:
+# 	Computer_tb
+# End time: 17:07:23 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Computer_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 35
+run -all
+# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(29)
+#    Time: 20 us  Iteration: 0  Instance: /Computer_tb
+# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 29
+vlog -work work {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:07:44 on Jun 01,2021
+# vlog -reportprogress 300 -work work C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v 
+# -- Compiling module Computer_tb
+# 
+# Top level modules:
+# 	Computer_tb
+# End time: 17:07:44 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Computer_tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 35
+run -all
+# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(29)
+#    Time: 30 us  Iteration: 0  Instance: /Computer_tb
+# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 29
+vlog -vlog01compat -work work {+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation} {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:47 on Jun 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v 
+# -- Compiling module seven_seg
+# 
+# Top level modules:
+# 	seven_seg
+# End time: 17:10:47 on Jun 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.seven_seg
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 35
+run -all
+# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(29)
+#    Time: 30 us  Iteration: 0  Instance: /Computer_tb
+# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 29
+add wave -position insertpoint  \
+sim:/Computer_tb/uut/output_module/u \
+sim:/Computer_tb/uut/output_module/t \
+sim:/Computer_tb/uut/output_module/h
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 35
+run -all
+# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(29)
+#    Time: 30 us  Iteration: 0  Instance: /Computer_tb
+# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 29
+add wave -position insertpoint  \
+sim:/Computer_tb/uut/output_module/num
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 35
+run -all
+# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(29)
+#    Time: 30 us  Iteration: 0  Instance: /Computer_tb
+# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 29
+vlog -vlog01compat -work work {+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation} {C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:31:23 on Jun 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/david/Desktop/8b-Computer/Verilog Implementation" C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v 
+# -- Compiling module output_module
+# 
+# Top level modules:
+# 	output_module
+# End time: 17:31:24 on Jun 01,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.output_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/units File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/tens File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'in'. The port definition is at: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v(2).
+#    Time: 0 ns  Iteration: 0  Instance: /Computer_tb/uut/output_module/hundreds File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 35
+run -all
+# ** Note: $stop    : C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v(29)
+#    Time: 30 us  Iteration: 0  Instance: /Computer_tb
+# Break in Module Computer_tb at C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v line 29
+# End time: 17:40:26 on Jun 01,2021, Elapsed time: 0:35:46
 # Errors: 0, Warnings: 3

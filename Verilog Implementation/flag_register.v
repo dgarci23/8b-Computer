@@ -14,7 +14,7 @@ module flag_register(
 	
 	initial begin FZ = 0; FC = 0; end
 	
-	always @(posedge clk) 
+	always @(posedge clk or posedge rst) 
 		begin
 			if (rst)
 				FZ <= 0;

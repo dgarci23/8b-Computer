@@ -9,7 +9,7 @@ module micro_instr (
 	
 	initial begin micro = 4; end
 	
-	always @(negedge clk)
+	always @(negedge clk or posedge rst)
 		begin
 			if (rst)
 				micro = 0;

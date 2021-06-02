@@ -13,14 +13,17 @@ Important Things:
 module Computer(
 	input CLOCK_50,
 	input [3:0] KEY,
+	input [17:0] SW,
 	output [6:0] HEX0,
 	output [6:0] HEX1,
-	output [6:0] HEX2
+	output [6:0] HEX2,
+	output [17:0] LEDR
 	);
 
 	// Inner Variables
 	wire [7:0] bus;
-	wire clk;
+	wire clk, AUTO, MANUAL, SELECTOR;
+	wire rst;
 	wire [2:0] micro;
 	wire [3:0] opcode;
 	
@@ -46,8 +49,22 @@ module Computer(
 	wire ZERO, CARRY, FZ, FC;
 	
 	// Relations
-	assign clk = CLOCK_50 && (~HLT);
-	assign rst = KEY[0];
+	assign AUTO = CLOCK_50 && (~HLT);
+	assign MANUAL = ~KEY[1] && (~HLT); 
+	assign LEDR[1] = MANUAL;
+	assign SELECTOR = SW[0];
+	assign LEDR[2] = SELECTOR;
+	assign rst = ~KEY[0];
+	assign LEDR[0] = rst;
+	assign LEDR[17] = ~HLT;
+	
+	// Clock Module
+	clk_module clk_module (
+		.AUTO(AUTO),
+		.MANUAL(MANUAL),
+		.SELECTOR(SELECTOR),
+		.CLK(clk)
+	);
 	
 	// Registers and ALU
 	ALU_Register ALU_Register (

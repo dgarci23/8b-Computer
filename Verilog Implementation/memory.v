@@ -24,11 +24,15 @@ module memory (
 	reg [7:0] mem_array [0:15];
 	
 	initial begin
-		mem_array[0] = 8'b00011000;
-		mem_array[1] = 8'b00101000;
-		mem_array[2] = 8'b11100000;
-		mem_array[3] = 8'b11110000;
-		mem_array[8] = 8'b00000001;
+		// Instructions
+		mem_array[0] = 8'b00011000; // LDA [8]
+		mem_array[1] = 8'b00101000; // ADD [8]
+		mem_array[2] = 8'b11100000; // OUT
+		mem_array[3] = 8'b01110101; // JC 5 
+		mem_array[4] = 8'b01100001; // JMP 1  
+		mem_array[5] = 8'b11110000; // HLT
+		// Values
+		mem_array[8] = 8'b00000010;
 	end
 	
 	always @(posedge clk)

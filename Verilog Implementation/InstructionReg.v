@@ -15,7 +15,7 @@ module InstructionReg(
 	initial begin instr = 0; end
 	
 	
-	always @(posedge clk) 
+	always @(posedge clk or posedge rst) 
 		begin	
 			if (rst)
 				instr <= 0;

@@ -13,19 +13,18 @@ module ProgramCounter (
 	
 	initial begin PC = 0; end
 	
-	always @(posedge clk)
+	always @(posedge clk or posedge rst)
 		begin
 			if (rst)
 				PC <= 0;
-			else if (CE)
-				begin
-					if (PC >= 15)
-						PC <= 0;
-					else 
-						PC <= PC + 1;
-				end
-			if (J)
-				PC <= bus;
+			else
+				if (CE)
+						if (PC >= 15)
+							PC <= 0;
+						else 
+							PC <= PC + 1;
+				else if (J)
+					PC <= bus;
 		end
 		
 	

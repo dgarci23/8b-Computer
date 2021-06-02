@@ -12,7 +12,7 @@ module output_reg (
 	
 	initial data_out = 0;
 		
-	always @(posedge clk)
+	always @(posedge clk or posedge rst)
 		begin
 			if (rst)
 				data_out <= 0;

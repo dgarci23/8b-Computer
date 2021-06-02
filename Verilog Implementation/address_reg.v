@@ -12,7 +12,7 @@ module address_reg (
 	
 	initial begin addr = 0; end
 	
-	always @(posedge clk)
+	always @(posedge clk or posedge rst)
 		begin
 			if (rst)
 				addr <= 0;
