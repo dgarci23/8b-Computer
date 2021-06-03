@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 8b_Computer
-Wed Jun 02 21:32:40 2021
+Wed Jun 02 21:58:55 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -52,13 +52,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 02 21:32:40 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 02 21:58:55 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; 8b_Computer                                 ;
 ; Top-level Entity Name              ; Computer                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 631                                         ;
-;     Total combinational functions  ; 499                                         ;
+; Total logic elements               ; 636                                         ;
+;     Total combinational functions  ; 504                                         ;
 ;     Dedicated logic registers      ; 177                                         ;
 ; Total registers                    ; 177                                         ;
 ; Total pins                         ; 62                                          ;
@@ -220,16 +220,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Estimated Total logic elements              ; 631                       ;
+; Estimated Total logic elements              ; 636                       ;
 ;                                             ;                           ;
-; Total combinational functions               ; 499                       ;
+; Total combinational functions               ; 504                       ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 237                       ;
-;     -- 3 input functions                    ; 106                       ;
-;     -- <=2 input functions                  ; 156                       ;
+;     -- 4 input functions                    ; 242                       ;
+;     -- 3 input functions                    ; 107                       ;
+;     -- <=2 input functions                  ; 155                       ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 426                       ;
+;     -- normal mode                          ; 431                       ;
 ;     -- arithmetic mode                      ; 73                        ;
 ;                                             ;                           ;
 ; Total registers                             ; 177                       ;
@@ -242,8 +242,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                           ;
 ; Maximum fan-out node                        ; clk_module:clk_module|CLK ;
 ; Maximum fan-out                             ; 177                       ;
-; Total fan-out                               ; 2208                      ;
-; Average fan-out                             ; 2.76                      ;
+; Total fan-out                               ; 2229                      ;
+; Average fan-out                             ; 2.77                      ;
 +---------------------------------------------+---------------------------+
 
 
@@ -252,7 +252,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                   ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Computer                                 ; 499 (2)             ; 177 (0)                   ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |Computer                                                                                                                             ; Computer            ; work         ;
+; |Computer                                 ; 504 (2)             ; 177 (0)                   ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |Computer                                                                                                                             ; Computer            ; work         ;
 ;    |ALU_Register:ALU_Register|            ; 21 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register                                                                                                   ; ALU_Register        ; work         ;
 ;       |ALU:ALU|                           ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|ALU:ALU                                                                                           ; ALU                 ; work         ;
 ;       |register_array:register_array|     ; 0 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|register_array:register_array                                                                     ; register_array      ; work         ;
@@ -260,17 +260,17 @@ https://fpgasoftware.intel.com/eula.
 ;          |register:registerB|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|register_array:register_array|register:registerB                                                  ; register            ; work         ;
 ;    |InstructionReg:InstructionReg|        ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|InstructionReg:InstructionReg                                                                                               ; InstructionReg      ; work         ;
 ;    |ProgramCounter:ProgramCounter|        ; 22 (22)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ProgramCounter:ProgramCounter                                                                                               ; ProgramCounter      ; work         ;
-;    |clk_module:clk_module|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|clk_module:clk_module                                                                                                       ; clk_module          ; work         ;
+;    |clk_module:clk_module|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|clk_module:clk_module                                                                                                       ; clk_module          ; work         ;
 ;    |control_logic:control_logic|          ; 58 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|control_logic:control_logic                                                                                                 ; control_logic       ; work         ;
 ;       |control_mem:control_mem|           ; 58 (58)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|control_logic:control_logic|control_mem:control_mem                                                                         ; control_mem         ; work         ;
 ;    |flag_register:flag_reg|               ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|flag_register:flag_reg                                                                                                      ; flag_register       ; work         ;
-;    |memory:memory|                        ; 148 (132)           ; 132 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory                                                                                                               ; memory              ; work         ;
+;    |memory:memory|                        ; 146 (131)           ; 132 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory                                                                                                               ; memory              ; work         ;
 ;       |address_reg:address_reg|           ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|address_reg:address_reg                                                                                       ; address_reg         ; work         ;
 ;       |mux_addr:mux_addr|                 ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_addr:mux_addr                                                                                             ; mux_addr            ; work         ;
-;       |mux_val:mux_val|                   ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_val:mux_val                                                                                               ; mux_val             ; work         ;
+;       |mux_val:mux_val|                   ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_val:mux_val                                                                                               ; mux_val             ; work         ;
 ;       |mux_write:mux_write|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_write:mux_write                                                                                           ; mux_write           ; work         ;
 ;    |micro_instr:micro_instr|              ; 4 (4)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|micro_instr:micro_instr                                                                                                     ; micro_instr         ; work         ;
-;    |out_mux:out_mux|                      ; 62 (62)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|out_mux:out_mux                                                                                                             ; out_mux             ; work         ;
+;    |out_mux:out_mux|                      ; 68 (68)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|out_mux:out_mux                                                                                                             ; out_mux             ; work         ;
 ;    |output_module:output_module|          ; 181 (0)             ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module                                                                                                 ; output_module       ; work         ;
 ;       |lpm_divide:Div0|                   ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_jhm:auto_generated|  ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm      ; work         ;
@@ -453,20 +453,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 128                         ;
 ;     ENA CLR           ; 40                          ;
 ;     ENA CLR SCLR SLD  ; 4                           ;
-; cycloneiii_lcell_comb ; 507                         ;
+; cycloneiii_lcell_comb ; 512                         ;
 ;     arith             ; 73                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 22                          ;
 ;         3 data inputs ; 50                          ;
-;     normal            ; 434                         ;
+;     normal            ; 439                         ;
 ;         0 data inputs ; 15                          ;
 ;         1 data inputs ; 31                          ;
-;         2 data inputs ; 95                          ;
-;         3 data inputs ; 56                          ;
-;         4 data inputs ; 237                         ;
+;         2 data inputs ; 94                          ;
+;         3 data inputs ; 57                          ;
+;         4 data inputs ; 242                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.90                       ;
-; Average LUT depth     ; 9.44                        ;
+; Average LUT depth     ; 9.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -475,7 +475,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -485,7 +485,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Jun 02 21:32:22 2021
+    Info: Processing started: Wed Jun 02 21:58:44 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8b_Computer -c 8b_Computer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -534,37 +534,38 @@ Info (12021): Found 1 design units, including 1 entities, in source file clk_mod
 Info (12021): Found 1 design units, including 1 entities, in source file mux_val.v
     Info (12023): Found entity 1: mux_val File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/mux_val.v Line: 1
 Info (12127): Elaborating entity "Computer" for the top level hierarchy
-Info (12128): Elaborating entity "clk_module" for hierarchy "clk_module:clk_module" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 80
-Info (12128): Elaborating entity "ALU_Register" for hierarchy "ALU_Register:ALU_Register" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 100
+Info (12128): Elaborating entity "clk_module" for hierarchy "clk_module:clk_module" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 82
+Info (12128): Elaborating entity "ALU_Register" for hierarchy "ALU_Register:ALU_Register" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 102
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU_Register:ALU_Register|ALU:ALU" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v Line: 30
 Info (12128): Elaborating entity "register_array" for hierarchy "ALU_Register:ALU_Register|register_array:register_array" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v Line: 44
 Info (12128): Elaborating entity "register" for hierarchy "ALU_Register:ALU_Register|register_array:register_array|register:registerA" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register_array.v Line: 21
-Info (12128): Elaborating entity "memory" for hierarchy "memory:memory" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 121
+Info (12128): Elaborating entity "memory" for hierarchy "memory:memory" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 123
 Info (12128): Elaborating entity "mux_addr" for hierarchy "memory:memory|mux_addr:mux_addr" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 32
-Info (12128): Elaborating entity "mux_val" for hierarchy "memory:memory|mux_val:mux_val" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 39
-Info (12128): Elaborating entity "mux_write" for hierarchy "memory:memory|mux_write:mux_write" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 46
-Info (12128): Elaborating entity "address_reg" for hierarchy "memory:memory|address_reg:address_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 55
-Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:ProgramCounter" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 135
+Info (12128): Elaborating entity "mux_val" for hierarchy "memory:memory|mux_val:mux_val" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 40
+Info (12128): Elaborating entity "mux_write" for hierarchy "memory:memory|mux_write:mux_write" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 48
+Info (12128): Elaborating entity "address_reg" for hierarchy "memory:memory|address_reg:address_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 57
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:ProgramCounter" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 137
 Warning (10230): Verilog HDL assignment warning at ProgramCounter.v(25): truncated value with size 32 to match size of target (8) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ProgramCounter.v Line: 25
-Info (12128): Elaborating entity "InstructionReg" for hierarchy "InstructionReg:InstructionReg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 149
-Info (12128): Elaborating entity "micro_instr" for hierarchy "micro_instr:micro_instr" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 158
+Info (12128): Elaborating entity "InstructionReg" for hierarchy "InstructionReg:InstructionReg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 151
+Info (12128): Elaborating entity "micro_instr" for hierarchy "micro_instr:micro_instr" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 160
 Warning (10230): Verilog HDL assignment warning at micro_instr.v(20): truncated value with size 32 to match size of target (3) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/micro_instr.v Line: 20
-Info (12128): Elaborating entity "flag_register" for hierarchy "flag_register:flag_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 173
-Info (12128): Elaborating entity "control_logic" for hierarchy "control_logic:control_logic" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 185
+Info (12128): Elaborating entity "flag_register" for hierarchy "flag_register:flag_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 175
+Info (12128): Elaborating entity "control_logic" for hierarchy "control_logic:control_logic" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 187
 Info (12128): Elaborating entity "control_mem" for hierarchy "control_logic:control_logic|control_mem:control_mem" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_logic.v Line: 18
 Warning (10030): Net "content.data_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v Line: 6
 Warning (10030): Net "content.waddr_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v Line: 6
 Warning (10030): Net "content.we_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v Line: 6
-Info (12128): Elaborating entity "out_mux" for hierarchy "out_mux:out_mux" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 200
+Info (12128): Elaborating entity "out_mux" for hierarchy "out_mux:out_mux" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 202
 Info (10264): Verilog HDL Case Statement information at out_mux.v(15): all case item expressions in this case statement are onehot File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v Line: 15
-Info (12128): Elaborating entity "output_module" for hierarchy "output_module:output_module" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 216
+Info (12128): Elaborating entity "output_module" for hierarchy "output_module:output_module" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 218
 Info (12128): Elaborating entity "output_reg" for hierarchy "output_module:output_module|output_reg:output_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 23
 Info (12128): Elaborating entity "seven_seg" for hierarchy "output_module:output_module|seven_seg:units" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 28
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer clk_module:clk_module|CLK File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/clk_module.v Line: 6
+    Warning (19017): Found clock multiplexer clk_module:clk_module|CLK File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/clk_module.v Line: 8
+    Warning (19017): Found clock multiplexer clk_module:clk_module|CLK~0 File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/clk_module.v Line: 8
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "control_logic:control_logic|control_mem:control_mem|content" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v Line: 6
-    Info (276007): RAM logic "memory:memory|mem_array" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 57
+    Info (276007): RAM logic "memory:memory|mem_array" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 59
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/8b_Computer.ram0_memory_e411fb78.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer control_logic:control_logic|control_mem:control_mem|content~0 File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v Line: 6
@@ -616,6 +617,7 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "output_module:output_module|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_7_result_int[0]~0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 62
     Info (17048): Logic cell "output_module:output_module|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_6_result_int[0]~10" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 57
+Info (144001): Generated suppressed messages file C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_files/8b_Computer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 5 input pin(s) that do not drive logic
@@ -624,16 +626,15 @@ Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
     Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
     Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-Info (21057): Implemented 709 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 714 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 647 logic cells
-Info (144001): Generated suppressed messages file C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_files/8b_Computer.map.smsg
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4788 megabytes
-    Info: Processing ended: Wed Jun 02 21:32:40 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:42
+    Info (21061): Implemented 652 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Wed Jun 02 21:58:55 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+

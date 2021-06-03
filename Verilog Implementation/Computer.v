@@ -75,6 +75,8 @@ module Computer(
 	clk_module clk_module (
 		.AUTO(AUTO),
 		.MANUAL(MANUAL),
+		.PROGRAM(PROG),
+		.manual_WE(manual_WE),
 		.SELECTOR(SELECTOR),
 		.CLK(clk)
 	);
