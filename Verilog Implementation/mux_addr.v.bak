@@ -1,0 +1,17 @@
+module mux_addr (
+	input [3:0] in0,
+	input [3:0] in1,
+	input SEL,
+	output reg [3:0] out
+	);
+	
+	always @(*)
+		begin
+			if (SEL)
+				out <= in0;
+			else
+				out <= in1;
+		end
+
+endmodule
+				

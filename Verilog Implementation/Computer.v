@@ -56,7 +56,20 @@ module Computer(
 	assign LEDR[2] = SELECTOR;
 	assign rst = ~KEY[0];
 	assign LEDR[0] = rst;
-	assign LEDR[17] = ~HLT;
+	assign LEDR[3] = ~HLT;
+	
+	// Manual address and value for the memory
+	wire [3:0] manual_addr = SW[17:14];
+	wire [7:0] manual_value = SW[13:6];
+	
+	wire manual_WE = ~KEY[2];
+	wire PROG = SW[5];
+	
+	assign LEDR[17:14] = SW[17:14];
+	assign LEDR[13:6] = SW[13:6];
+	
+	assign LEDR[4] = manual_WE;
+	assign LEDR[5] = PROG;
 	
 	// Clock Module
 	clk_module clk_module (
@@ -91,11 +104,18 @@ module Computer(
 		// System Inputs
 		.clk(clk),
 		.rst(rst),
+		// Manual control signals
+		.manual_WE(manual_WE),
 		// Control Signals
 		.WE(WE),
 		.MI(MI),
 		// Inputs
 		.bus(bus),
+		// Manual values
+		.manual_addr(manual_addr),
+		.manual_value(manual_value),
+		// Selector
+		.SEL(PROG),
 		// Outputs
 		.mem_out(mem_out)
 	);

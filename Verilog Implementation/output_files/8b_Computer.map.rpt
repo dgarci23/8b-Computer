@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 8b_Computer
-Tue Jun 01 17:31:57 2021
+Wed Jun 02 21:32:40 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,25 +13,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Registers Added for RAM Pass-Through Logic
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for memory:memory|altsyncram:mem_array_rtl_0|altsyncram_dmi1:auto_generated
- 14. Parameter Settings for Inferred Entity Instance: memory:memory|altsyncram:mem_array_rtl_0
- 15. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Mod0
- 16. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div0
- 17. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Mod1
- 18. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div1
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "output_module:output_module|seven_seg:hundreds"
- 21. Port Connectivity Checks: "output_module:output_module|seven_seg:tens"
- 22. Port Connectivity Checks: "output_module:output_module|seven_seg:units"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
- 26. Analysis & Synthesis Suppressed Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Mod0
+ 11. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div0
+ 12. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Mod1
+ 13. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div1
+ 14. Port Connectivity Checks: "output_module:output_module|seven_seg:hundreds"
+ 15. Port Connectivity Checks: "output_module:output_module|seven_seg:tens"
+ 16. Port Connectivity Checks: "output_module:output_module|seven_seg:units"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -58,18 +52,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 01 17:31:57 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 02 21:32:40 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; 8b_Computer                                 ;
 ; Top-level Entity Name              ; Computer                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 423                                         ;
-;     Total combinational functions  ; 362                                         ;
-;     Dedicated logic registers      ; 83                                          ;
-; Total registers                    ; 83                                          ;
+; Total logic elements               ; 631                                         ;
+;     Total combinational functions  ; 499                                         ;
+;     Dedicated logic registers      ; 177                                         ;
+; Total registers                    ; 177                                         ;
 ; Total pins                         ; 62                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 128                                         ;
+; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -178,54 +172,47 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                  ;
-+---------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path            ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                          ; Library ;
-+---------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; register.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register.v                                  ;         ;
-; register_array.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register_array.v                            ;         ;
-; ALU.v                                       ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU.v                                       ;         ;
-; ALU_Register.v                              ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v                              ;         ;
-; InstructionReg.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/InstructionReg.v                            ;         ;
-; ProgramCounter.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ProgramCounter.v                            ;         ;
-; memory.v                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v                                    ;         ;
-; address_reg.v                               ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v                               ;         ;
-; flag_register.v                             ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/flag_register.v                             ;         ;
-; Computer.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v                                  ;         ;
-; seven_seg.v                                 ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v                                 ;         ;
-; output_reg.v                                ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_reg.v                                ;         ;
-; output_module.v                             ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v                             ;         ;
-; micro_instr.v                               ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/micro_instr.v                               ;         ;
-; control_logic.v                             ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_logic.v                             ;         ;
-; control_mem.v                               ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v                               ;         ;
-; out_mux.v                                   ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v                                   ;         ;
-; clk_module.v                                ; yes             ; User Verilog HDL File                                 ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/clk_module.v                                ;         ;
-; signals.txt                                 ; yes             ; Auto-Found File                                       ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/signals.txt                                 ;         ;
-; altsyncram.tdf                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                 ;         ;
-; stratix_ram_block.inc                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                          ;         ;
-; lpm_mux.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                    ;         ;
-; lpm_decode.inc                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                 ;         ;
-; aglobal201.inc                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                 ;         ;
-; a_rdenreg.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                  ;         ;
-; altrom.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                     ;         ;
-; altram.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                     ;         ;
-; altdpram.inc                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                   ;         ;
-; db/altsyncram_dmi1.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/altsyncram_dmi1.tdf                      ;         ;
-; db/8b_computer.ram0_memory_e411fb78.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/8b_computer.ram0_memory_e411fb78.hdl.mif ;         ;
-; lpm_divide.tdf                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                 ;         ;
-; abs_divider.inc                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                ;         ;
-; sign_div_unsign.inc                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                            ;         ;
-; db/lpm_divide_m9m.tdf                       ; yes             ; Auto-Generated Megafunction                           ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_m9m.tdf                       ;         ;
-; db/sign_div_unsign_bkh.tdf                  ; yes             ; Auto-Generated Megafunction                           ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/sign_div_unsign_bkh.tdf                  ;         ;
-; db/alt_u_div_a4f.tdf                        ; yes             ; Auto-Generated Megafunction                           ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf                        ;         ;
-; db/add_sub_7pc.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/add_sub_7pc.tdf                          ;         ;
-; db/add_sub_8pc.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/add_sub_8pc.tdf                          ;         ;
-; db/lpm_divide_jhm.tdf                       ; yes             ; Auto-Generated Megafunction                           ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_jhm.tdf                       ;         ;
-; db/lpm_divide_mhm.tdf                       ; yes             ; Auto-Generated Megafunction                           ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_mhm.tdf                       ;         ;
-; db/sign_div_unsign_ekh.tdf                  ; yes             ; Auto-Generated Megafunction                           ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/sign_div_unsign_ekh.tdf                  ;         ;
-; db/alt_u_div_g4f.tdf                        ; yes             ; Auto-Generated Megafunction                           ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_g4f.tdf                        ;         ;
-+---------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
+; mux_write.v                      ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/mux_write.v                ;         ;
+; mux_addr.v                       ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/mux_addr.v                 ;         ;
+; register.v                       ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register.v                 ;         ;
+; register_array.v                 ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register_array.v           ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU.v                      ;         ;
+; ALU_Register.v                   ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v             ;         ;
+; InstructionReg.v                 ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/InstructionReg.v           ;         ;
+; ProgramCounter.v                 ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ProgramCounter.v           ;         ;
+; memory.v                         ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v                   ;         ;
+; address_reg.v                    ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/address_reg.v              ;         ;
+; flag_register.v                  ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/flag_register.v            ;         ;
+; Computer.v                       ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v                 ;         ;
+; seven_seg.v                      ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/seven_seg.v                ;         ;
+; output_reg.v                     ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_reg.v               ;         ;
+; output_module.v                  ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v            ;         ;
+; micro_instr.v                    ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/micro_instr.v              ;         ;
+; control_logic.v                  ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_logic.v            ;         ;
+; control_mem.v                    ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v              ;         ;
+; out_mux.v                        ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v                  ;         ;
+; clk_module.v                     ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/clk_module.v               ;         ;
+; mux_val.v                        ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/mux_val.v                  ;         ;
+; signals.txt                      ; yes             ; Auto-Found File              ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/signals.txt                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc               ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc           ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                ;         ;
+; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_m9m.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_jhm.tdf      ;         ;
+; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_mhm.tdf      ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/sign_div_unsign_ekh.tdf ;         ;
+; db/alt_u_div_g4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_g4f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------+
@@ -233,31 +220,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Estimated Total logic elements              ; 423                       ;
+; Estimated Total logic elements              ; 631                       ;
 ;                                             ;                           ;
-; Total combinational functions               ; 362                       ;
+; Total combinational functions               ; 499                       ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 128                       ;
-;     -- 3 input functions                    ; 100                       ;
-;     -- <=2 input functions                  ; 134                       ;
+;     -- 4 input functions                    ; 237                       ;
+;     -- 3 input functions                    ; 106                       ;
+;     -- <=2 input functions                  ; 156                       ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 289                       ;
+;     -- normal mode                          ; 426                       ;
 ;     -- arithmetic mode                      ; 73                        ;
 ;                                             ;                           ;
-; Total registers                             ; 83                        ;
-;     -- Dedicated logic registers            ; 83                        ;
+; Total registers                             ; 177                       ;
+;     -- Dedicated logic registers            ; 177                       ;
 ;     -- I/O registers                        ; 0                         ;
 ;                                             ;                           ;
 ; I/O pins                                    ; 62                        ;
-; Total memory bits                           ; 128                       ;
 ;                                             ;                           ;
 ; Embedded Multiplier 9-bit elements          ; 0                         ;
 ;                                             ;                           ;
 ; Maximum fan-out node                        ; clk_module:clk_module|CLK ;
-; Maximum fan-out                             ; 91                        ;
-; Total fan-out                               ; 1497                      ;
-; Average fan-out                             ; 2.59                      ;
+; Maximum fan-out                             ; 177                       ;
+; Total fan-out                               ; 2208                      ;
+; Average fan-out                             ; 2.76                      ;
 +---------------------------------------------+---------------------------+
 
 
@@ -266,24 +252,25 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                   ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Computer                                 ; 362 (2)             ; 83 (0)                    ; 128         ; 0            ; 0       ; 0         ; 62   ; 0            ; |Computer                                                                                                                             ; Computer            ; work         ;
+; |Computer                                 ; 499 (2)             ; 177 (0)                   ; 0           ; 0            ; 0       ; 0         ; 62   ; 0            ; |Computer                                                                                                                             ; Computer            ; work         ;
 ;    |ALU_Register:ALU_Register|            ; 21 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register                                                                                                   ; ALU_Register        ; work         ;
 ;       |ALU:ALU|                           ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|ALU:ALU                                                                                           ; ALU                 ; work         ;
 ;       |register_array:register_array|     ; 0 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|register_array:register_array                                                                     ; register_array      ; work         ;
 ;          |register:registerA|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|register_array:register_array|register:registerA                                                  ; register            ; work         ;
 ;          |register:registerB|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|register_array:register_array|register:registerB                                                  ; register            ; work         ;
 ;    |InstructionReg:InstructionReg|        ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|InstructionReg:InstructionReg                                                                                               ; InstructionReg      ; work         ;
-;    |ProgramCounter:ProgramCounter|        ; 29 (29)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ProgramCounter:ProgramCounter                                                                                               ; ProgramCounter      ; work         ;
+;    |ProgramCounter:ProgramCounter|        ; 22 (22)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ProgramCounter:ProgramCounter                                                                                               ; ProgramCounter      ; work         ;
 ;    |clk_module:clk_module|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|clk_module:clk_module                                                                                                       ; clk_module          ; work         ;
-;    |control_logic:control_logic|          ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|control_logic:control_logic                                                                                                 ; control_logic       ; work         ;
-;       |control_mem:control_mem|           ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|control_logic:control_logic|control_mem:control_mem                                                                         ; control_mem         ; work         ;
+;    |control_logic:control_logic|          ; 58 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|control_logic:control_logic                                                                                                 ; control_logic       ; work         ;
+;       |control_mem:control_mem|           ; 58 (58)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|control_logic:control_logic|control_mem:control_mem                                                                         ; control_mem         ; work         ;
 ;    |flag_register:flag_reg|               ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|flag_register:flag_reg                                                                                                      ; flag_register       ; work         ;
-;    |memory:memory|                        ; 19 (19)             ; 38 (34)                   ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory                                                                                                               ; memory              ; work         ;
+;    |memory:memory|                        ; 148 (132)           ; 132 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory                                                                                                               ; memory              ; work         ;
 ;       |address_reg:address_reg|           ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|address_reg:address_reg                                                                                       ; address_reg         ; work         ;
-;       |altsyncram:mem_array_rtl_0|        ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|altsyncram:mem_array_rtl_0                                                                                    ; altsyncram          ; work         ;
-;          |altsyncram_dmi1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|altsyncram:mem_array_rtl_0|altsyncram_dmi1:auto_generated                                                     ; altsyncram_dmi1     ; work         ;
+;       |mux_addr:mux_addr|                 ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_addr:mux_addr                                                                                             ; mux_addr            ; work         ;
+;       |mux_val:mux_val|                   ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_val:mux_val                                                                                               ; mux_val             ; work         ;
+;       |mux_write:mux_write|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_write:mux_write                                                                                           ; mux_write           ; work         ;
 ;    |micro_instr:micro_instr|              ; 4 (4)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|micro_instr:micro_instr                                                                                                     ; micro_instr         ; work         ;
-;    |out_mux:out_mux|                      ; 46 (46)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|out_mux:out_mux                                                                                                             ; out_mux             ; work         ;
+;    |out_mux:out_mux|                      ; 62 (62)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|out_mux:out_mux                                                                                                             ; out_mux             ; work         ;
 ;    |output_module:output_module|          ; 181 (0)             ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module                                                                                                 ; output_module       ; work         ;
 ;       |lpm_divide:Div0|                   ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_jhm:auto_generated|  ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm      ; work         ;
@@ -309,82 +296,19 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                              ;
-+------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+---------------------------------------------+
-; Name                                                                               ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                         ;
-+------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+---------------------------------------------+
-; memory:memory|altsyncram:mem_array_rtl_0|altsyncram_dmi1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 8            ; 16           ; 8            ; 128  ; db/8b_Computer.ram0_memory_e411fb78.hdl.mif ;
-+------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+---------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 83    ;
+; Total registers                              ; 177   ;
 ; Number of registers using Synchronous Clear  ; 4     ;
 ; Number of registers using Synchronous Load   ; 4     ;
-; Number of registers using Asynchronous Clear ; 54    ;
+; Number of registers using Asynchronous Clear ; 49    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 57    ;
+; Number of registers using Clock Enable       ; 172   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+----------------------------------------------------+
-; Inverted Register Statistics                       ;
-+------------------------------------------+---------+
-; Inverted Register                        ; Fan out ;
-+------------------------------------------+---------+
-; memory:memory|mem_array_rtl_0_bypass[10] ; 1       ;
-; memory:memory|mem_array_rtl_0_bypass[12] ; 1       ;
-; memory:memory|mem_array_rtl_0_bypass[24] ; 1       ;
-; memory:memory|mem_array_rtl_0_bypass[22] ; 1       ;
-; memory:memory|mem_array_rtl_0_bypass[20] ; 1       ;
-; memory:memory|mem_array~5                ; 1       ;
-; memory:memory|mem_array_rtl_0_bypass[18] ; 1       ;
-; memory:memory|mem_array_rtl_0_bypass[17] ; 1       ;
-; memory:memory|mem_array~4                ; 1       ;
-; memory:memory|mem_array_rtl_0_bypass[16] ; 1       ;
-; memory:memory|mem_array_rtl_0_bypass[15] ; 1       ;
-; memory:memory|mem_array_rtl_0_bypass[14] ; 1       ;
-; Total number of inverted registers = 12  ;         ;
-+------------------------------------------+---------+
-
-
-+--------------------------------------------------------------------------+
-; Registers Added for RAM Pass-Through Logic                               ;
-+------------------------------------------+-------------------------------+
-; Register Name                            ; RAM Name                      ;
-+------------------------------------------+-------------------------------+
-; memory:memory|mem_array_rtl_0_bypass[0]  ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[1]  ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[2]  ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[3]  ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[4]  ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[5]  ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[6]  ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[7]  ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[8]  ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[9]  ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[10] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[11] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[12] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[13] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[14] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[15] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[16] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[17] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[18] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[19] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[20] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[21] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[22] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[23] ; memory:memory|mem_array_rtl_0 ;
-; memory:memory|mem_array_rtl_0_bypass[24] ; memory:memory|mem_array_rtl_0 ;
-+------------------------------------------+-------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -394,77 +318,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Computer|ProgramCounter:ProgramCounter|PC[7] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Computer|ProgramCounter:ProgramCounter|PC[3] ;
+; 37:1               ; 4 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |Computer|out_mux:out_mux|Selector3           ;
+; 38:1               ; 4 bits    ; 100 LEs       ; 28 LEs               ; 72 LEs                 ; No         ; |Computer|out_mux:out_mux|Selector7           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Source assignments for memory:memory|altsyncram:mem_array_rtl_0|altsyncram_dmi1:auto_generated ;
-+---------------------------------+--------------------+------+----------------------------------+
-; Assignment                      ; Value              ; From ; To                               ;
-+---------------------------------+--------------------+------+----------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                ;
-+---------------------------------+--------------------+------+----------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: memory:memory|altsyncram:mem_array_rtl_0         ;
-+------------------------------------+---------------------------------------------+----------------+
-; Parameter Name                     ; Value                                       ; Type           ;
-+------------------------------------+---------------------------------------------+----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                           ; Untyped        ;
-; AUTO_CARRY_CHAINS                  ; ON                                          ; AUTO_CARRY     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                         ; IGNORE_CARRY   ;
-; AUTO_CASCADE_CHAINS                ; ON                                          ; AUTO_CASCADE   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                         ; IGNORE_CASCADE ;
-; WIDTH_BYTEENA                      ; 1                                           ; Untyped        ;
-; OPERATION_MODE                     ; DUAL_PORT                                   ; Untyped        ;
-; WIDTH_A                            ; 8                                           ; Untyped        ;
-; WIDTHAD_A                          ; 4                                           ; Untyped        ;
-; NUMWORDS_A                         ; 16                                          ; Untyped        ;
-; OUTDATA_REG_A                      ; UNREGISTERED                                ; Untyped        ;
-; ADDRESS_ACLR_A                     ; NONE                                        ; Untyped        ;
-; OUTDATA_ACLR_A                     ; NONE                                        ; Untyped        ;
-; WRCONTROL_ACLR_A                   ; NONE                                        ; Untyped        ;
-; INDATA_ACLR_A                      ; NONE                                        ; Untyped        ;
-; BYTEENA_ACLR_A                     ; NONE                                        ; Untyped        ;
-; WIDTH_B                            ; 8                                           ; Untyped        ;
-; WIDTHAD_B                          ; 4                                           ; Untyped        ;
-; NUMWORDS_B                         ; 16                                          ; Untyped        ;
-; INDATA_REG_B                       ; CLOCK1                                      ; Untyped        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                      ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK1                                      ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK0                                      ; Untyped        ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                ; Untyped        ;
-; BYTEENA_REG_B                      ; CLOCK1                                      ; Untyped        ;
-; INDATA_ACLR_B                      ; NONE                                        ; Untyped        ;
-; WRCONTROL_ACLR_B                   ; NONE                                        ; Untyped        ;
-; ADDRESS_ACLR_B                     ; NONE                                        ; Untyped        ;
-; OUTDATA_ACLR_B                     ; NONE                                        ; Untyped        ;
-; RDCONTROL_ACLR_B                   ; NONE                                        ; Untyped        ;
-; BYTEENA_ACLR_B                     ; NONE                                        ; Untyped        ;
-; WIDTH_BYTEENA_A                    ; 1                                           ; Untyped        ;
-; WIDTH_BYTEENA_B                    ; 1                                           ; Untyped        ;
-; RAM_BLOCK_TYPE                     ; AUTO                                        ; Untyped        ;
-; BYTE_SIZE                          ; 8                                           ; Untyped        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                   ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                        ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                        ; Untyped        ;
-; INIT_FILE                          ; db/8b_Computer.ram0_memory_e411fb78.hdl.mif ; Untyped        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                      ; Untyped        ;
-; MAXIMUM_DEPTH                      ; 0                                           ; Untyped        ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                                      ; Untyped        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                      ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                      ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                      ; Untyped        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                             ; Untyped        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                             ; Untyped        ;
-; ENABLE_ECC                         ; FALSE                                       ; Untyped        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                       ; Untyped        ;
-; WIDTH_ECCSTATUS                    ; 3                                           ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone IV E                                ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_dmi1                             ; Untyped        ;
-+------------------------------------+---------------------------------------------+----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------------------------+
@@ -559,26 +415,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                     ;
-+-------------------------------------------+------------------------------------------+
-; Name                                      ; Value                                    ;
-+-------------------------------------------+------------------------------------------+
-; Number of entity instances                ; 1                                        ;
-; Entity Instance                           ; memory:memory|altsyncram:mem_array_rtl_0 ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                                ;
-;     -- WIDTH_A                            ; 8                                        ;
-;     -- NUMWORDS_A                         ; 16                                       ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                             ;
-;     -- WIDTH_B                            ; 8                                        ;
-;     -- NUMWORDS_B                         ; 16                                       ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                                   ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                             ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                     ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                ;
-+-------------------------------------------+------------------------------------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "output_module:output_module|seven_seg:hundreds"                                                                                                                                   ;
 +------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -612,27 +448,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 62                          ;
-; cycloneiii_ff         ; 83                          ;
+; cycloneiii_ff         ; 177                         ;
 ;     CLR               ; 5                           ;
-;     ENA               ; 8                           ;
-;     ENA CLR           ; 45                          ;
+;     ENA               ; 128                         ;
+;     ENA CLR           ; 40                          ;
 ;     ENA CLR SCLR SLD  ; 4                           ;
-;     plain             ; 21                          ;
-; cycloneiii_lcell_comb ; 369                         ;
+; cycloneiii_lcell_comb ; 507                         ;
 ;     arith             ; 73                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 22                          ;
 ;         3 data inputs ; 50                          ;
-;     normal            ; 296                         ;
+;     normal            ; 434                         ;
 ;         0 data inputs ; 15                          ;
-;         1 data inputs ; 14                          ;
-;         2 data inputs ; 89                          ;
-;         3 data inputs ; 50                          ;
-;         4 data inputs ; 128                         ;
-; cycloneiii_ram_block  ; 8                           ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 95                          ;
+;         3 data inputs ; 56                          ;
+;         4 data inputs ; 237                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.90                       ;
-; Average LUT depth     ; 8.92                        ;
+; Average LUT depth     ; 9.44                        ;
 +-----------------------+-----------------------------+
 
 
@@ -651,10 +485,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Jun 01 17:31:38 2021
+    Info: Processing started: Wed Jun 02 21:32:22 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8b_Computer -c 8b_Computer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mux_write.v
+    Info (12023): Found entity 1: mux_write File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/mux_write.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_addr.v
+    Info (12023): Found entity 1: mux_addr File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/mux_addr.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
     Info (12023): Found entity 1: register File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register_array.v
@@ -693,81 +531,48 @@ Info (12021): Found 1 design units, including 1 entities, in source file compute
     Info (12023): Found entity 1: Computer_tb File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file clk_module.v
     Info (12023): Found entity 1: clk_module File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/clk_module.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_val.v
+    Info (12023): Found entity 1: mux_val File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/mux_val.v Line: 1
 Info (12127): Elaborating entity "Computer" for the top level hierarchy
-Warning (10034): Output port "LEDR[16..3]" at Computer.v(21) has no driver File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 21
-Info (12128): Elaborating entity "clk_module" for hierarchy "clk_module:clk_module" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 67
-Info (12128): Elaborating entity "ALU_Register" for hierarchy "ALU_Register:ALU_Register" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 87
+Info (12128): Elaborating entity "clk_module" for hierarchy "clk_module:clk_module" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 80
+Info (12128): Elaborating entity "ALU_Register" for hierarchy "ALU_Register:ALU_Register" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 100
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU_Register:ALU_Register|ALU:ALU" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v Line: 30
 Info (12128): Elaborating entity "register_array" for hierarchy "ALU_Register:ALU_Register|register_array:register_array" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ALU_Register.v Line: 44
 Info (12128): Elaborating entity "register" for hierarchy "ALU_Register:ALU_Register|register_array:register_array|register:registerA" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/register_array.v Line: 21
-Info (12128): Elaborating entity "memory" for hierarchy "memory:memory" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 101
-Info (12128): Elaborating entity "address_reg" for hierarchy "memory:memory|address_reg:address_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 22
-Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:ProgramCounter" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 115
+Info (12128): Elaborating entity "memory" for hierarchy "memory:memory" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 121
+Info (12128): Elaborating entity "mux_addr" for hierarchy "memory:memory|mux_addr:mux_addr" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 32
+Info (12128): Elaborating entity "mux_val" for hierarchy "memory:memory|mux_val:mux_val" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 39
+Info (12128): Elaborating entity "mux_write" for hierarchy "memory:memory|mux_write:mux_write" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 46
+Info (12128): Elaborating entity "address_reg" for hierarchy "memory:memory|address_reg:address_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 55
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:ProgramCounter" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 135
 Warning (10230): Verilog HDL assignment warning at ProgramCounter.v(25): truncated value with size 32 to match size of target (8) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/ProgramCounter.v Line: 25
-Info (12128): Elaborating entity "InstructionReg" for hierarchy "InstructionReg:InstructionReg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 129
-Info (12128): Elaborating entity "micro_instr" for hierarchy "micro_instr:micro_instr" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 138
+Info (12128): Elaborating entity "InstructionReg" for hierarchy "InstructionReg:InstructionReg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 149
+Info (12128): Elaborating entity "micro_instr" for hierarchy "micro_instr:micro_instr" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 158
 Warning (10230): Verilog HDL assignment warning at micro_instr.v(20): truncated value with size 32 to match size of target (3) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/micro_instr.v Line: 20
-Info (12128): Elaborating entity "flag_register" for hierarchy "flag_register:flag_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 153
-Info (12128): Elaborating entity "control_logic" for hierarchy "control_logic:control_logic" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 165
+Info (12128): Elaborating entity "flag_register" for hierarchy "flag_register:flag_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 173
+Info (12128): Elaborating entity "control_logic" for hierarchy "control_logic:control_logic" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 185
 Info (12128): Elaborating entity "control_mem" for hierarchy "control_logic:control_logic|control_mem:control_mem" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_logic.v Line: 18
 Warning (10030): Net "content.data_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v Line: 6
 Warning (10030): Net "content.waddr_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v Line: 6
 Warning (10030): Net "content.we_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v Line: 6
-Info (12128): Elaborating entity "out_mux" for hierarchy "out_mux:out_mux" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 180
+Info (12128): Elaborating entity "out_mux" for hierarchy "out_mux:out_mux" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 200
 Info (10264): Verilog HDL Case Statement information at out_mux.v(15): all case item expressions in this case statement are onehot File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/out_mux.v Line: 15
-Info (12128): Elaborating entity "output_module" for hierarchy "output_module:output_module" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 196
+Info (12128): Elaborating entity "output_module" for hierarchy "output_module:output_module" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 216
 Info (12128): Elaborating entity "output_reg" for hierarchy "output_module:output_module|output_reg:output_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 23
 Info (12128): Elaborating entity "seven_seg" for hierarchy "output_module:output_module|seven_seg:units" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 28
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer clk_module:clk_module|CLK File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/clk_module.v Line: 6
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/8b_Computer.ram0_memory_e411fb78.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (276020): Inferred RAM node "memory:memory|mem_array_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/8b_Computer.ram0_memory_e411fb78.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Info (276014): Found 1 instances of uninferred RAM logic
+Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "control_logic:control_logic|control_mem:control_mem|content" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v Line: 6
+    Info (276007): RAM logic "memory:memory|mem_array" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/memory.v Line: 57
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/8b_Computer.ram0_memory_e411fb78.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer control_logic:control_logic|control_mem:control_mem|content~0 File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/control_mem.v Line: 6
-Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "memory:memory|mem_array_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 8
-        Info (286033): Parameter WIDTHAD_A set to 4
-        Info (286033): Parameter NUMWORDS_A set to 16
-        Info (286033): Parameter WIDTH_B set to 8
-        Info (286033): Parameter WIDTHAD_B set to 4
-        Info (286033): Parameter NUMWORDS_B set to 16
-        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
-        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
-        Info (286033): Parameter INDATA_ACLR_A set to NONE
-        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/8b_Computer.ram0_memory_e411fb78.hdl.mif
 Info (278001): Inferred 4 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Mod0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 26
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Div0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 31
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Mod1" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 31
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Div1" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 36
-Info (12130): Elaborated megafunction instantiation "memory:memory|altsyncram:mem_array_rtl_0"
-Info (12133): Instantiated megafunction "memory:memory|altsyncram:mem_array_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "8"
-    Info (12134): Parameter "WIDTHAD_A" = "4"
-    Info (12134): Parameter "NUMWORDS_A" = "16"
-    Info (12134): Parameter "WIDTH_B" = "8"
-    Info (12134): Parameter "WIDTHAD_B" = "4"
-    Info (12134): Parameter "NUMWORDS_B" = "16"
-    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
-    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
-    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
-    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "INIT_FILE" = "db/8b_Computer.ram0_memory_e411fb78.hdl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dmi1.tdf
-    Info (12023): Found entity 1: altsyncram_dmi1 File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/altsyncram_dmi1.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "output_module:output_module|lpm_divide:Mod0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 26
 Info (12133): Instantiated megafunction "output_module:output_module|lpm_divide:Mod0" with the following parameter: File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_module.v Line: 26
     Info (12134): Parameter "LPM_WIDTHN" = "8"
@@ -811,38 +616,23 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "output_module:output_module|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_7_result_int[0]~0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 62
     Info (17048): Logic cell "output_module:output_module|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_6_result_int[0]~10" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 57
-Info (144001): Generated suppressed messages file C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_files/8b_Computer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 19 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 15
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 15
     Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
     Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
     Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
     Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[12]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[13]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[14]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[15]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-    Warning (15610): No output dependent on input pin "SW[17]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/Computer.v Line: 16
-Info (21057): Implemented 502 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 709 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 432 logic cells
-    Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Tue Jun 01 17:31:57 2021
-    Info: Elapsed time: 00:00:19
+    Info (21061): Implemented 647 logic cells
+Info (144001): Generated suppressed messages file C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_files/8b_Computer.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Wed Jun 02 21:32:40 2021
+    Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:42
 
 

@@ -1,0 +1,8 @@
+module mux_write (
+	input WE,
+	input manual_WE,
+	input SEL,
+	output sel_WE
+	);
+	
+	

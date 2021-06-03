@@ -3,7 +3,7 @@ module address_reg (
 	input rst,
 	input clk,
 	// Values In
-	input [7:0] bus,
+	input [3:0] bus,
 	// Control Signals
 	input MI,
 	// Outputs
@@ -18,7 +18,7 @@ module address_reg (
 				addr <= 0;
 			else
 				if (MI)
-					addr <= bus[3:0];
+					addr <= bus;
 		end
 
 endmodule			

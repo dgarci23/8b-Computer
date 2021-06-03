@@ -24,8 +24,13 @@ module Computer_tb ();
 
 	initial
 	begin
-		key = 1; clk = 0;
-		#30000;
+		// key[2] = 1; 
+		key[0] = 1; clk = 0; SW[17:6] = 8'h00; 
+		// SW[5] = 0;
+		// #10;
+		key[2] = 0; SW[5] = 1; 
+		#100;
+
 		$stop;
 	end
 

@@ -1,0 +1,17 @@
+module mux_val (
+	input [7:0] in0,
+	input [7:0] in1,
+	input SEL,
+	output [7:0] out
+	);
+	
+	always @(*)
+		begin
+			if (SEL)
+				out <= in0;
+			else
+				out <= in1;
+		end
+
+endmodule
+		
