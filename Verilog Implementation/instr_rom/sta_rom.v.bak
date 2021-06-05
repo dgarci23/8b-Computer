@@ -1,0 +1,14 @@
+module sta_rom (
+	input [4:0] addr,
+	output reg [4:0] label
+	);
+	
+	always @(*)
+		case (addr)
+			0: lcd_val = "S";
+			1: lcd_val = "T";
+			2: lcd_val = "A";
+			default: lcd_val = " ";
+		endcase
+	
+endmodule

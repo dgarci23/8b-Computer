@@ -1105,32 +1105,46 @@ set_location_assignment PIN_V24 -to HSMC_CLKOUT_N2
 set_instance_assignment -name IO_STANDARD LVDS -to HSMC_CLKOUT_N2
 set_location_assignment PIN_G24 -to HSMC_CLKOUT_N1
 set_instance_assignment -name IO_STANDARD LVDS -to HSMC_CLKOUT_N1
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE verilog/seven_seg.v
+set_global_assignment -name VERILOG_FILE verilog/reset_delay.v
+set_global_assignment -name VERILOG_FILE verilog/register_array.v
+set_global_assignment -name VERILOG_FILE verilog/register.v
+set_global_assignment -name VERILOG_FILE verilog/ProgramCounter.v
+set_global_assignment -name VERILOG_FILE verilog/output_reg.v
+set_global_assignment -name VERILOG_FILE verilog/output_module.v
+set_global_assignment -name VERILOG_FILE verilog/out_mux.v
+set_global_assignment -name VERILOG_FILE verilog/mux_write.v
+set_global_assignment -name VERILOG_FILE verilog/mux_val.v
+set_global_assignment -name VERILOG_FILE verilog/mux_addr.v
+set_global_assignment -name VERILOG_FILE verilog/micro_instr.v
+set_global_assignment -name VERILOG_FILE verilog/memory.v
+set_global_assignment -name VERILOG_FILE verilog/LCD_Display.v
+set_global_assignment -name VERILOG_FILE verilog/LCD_Controller.v
+set_global_assignment -name VERILOG_FILE verilog/InstructionReg.v
+set_global_assignment -name VERILOG_FILE verilog/flag_register.v
+set_global_assignment -name VERILOG_FILE verilog/control_mem.v
+set_global_assignment -name VERILOG_FILE verilog/control_logic.v
+set_global_assignment -name VERILOG_FILE verilog/Computer_tb.v
+set_global_assignment -name VERILOG_FILE verilog/Computer.v
+set_global_assignment -name VERILOG_FILE verilog/clk_module.v
+set_global_assignment -name VERILOG_FILE verilog/ALU_Register.v
+set_global_assignment -name VERILOG_FILE verilog/ALU.v
+set_global_assignment -name VERILOG_FILE verilog/address_reg.v
+set_global_assignment -name VERILOG_FILE verilog/lcd_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/add_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/lda_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/np_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/sub_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/sta_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/ldi_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/jmp_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/jc_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/jz_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/out_rom.v
+set_global_assignment -name VERILOG_FILE instr_rom/hlt_rom.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE mux_write.v
-set_global_assignment -name VERILOG_FILE mux_addr.v
-set_global_assignment -name VERILOG_FILE register.v
-set_global_assignment -name VERILOG_FILE register_array.v
-set_global_assignment -name VERILOG_FILE ALU.v
-set_global_assignment -name VERILOG_FILE ALU_Register.v
-set_global_assignment -name VERILOG_FILE InstructionReg.v
-set_global_assignment -name VERILOG_FILE ProgramCounter.v
-set_global_assignment -name VERILOG_FILE memory.v
-set_global_assignment -name VERILOG_FILE address_reg.v
-set_global_assignment -name VERILOG_FILE flag_register.v
-set_global_assignment -name VERILOG_FILE Computer.v
-set_global_assignment -name VERILOG_FILE seven_seg.v
-set_global_assignment -name VERILOG_FILE output_reg.v
-set_global_assignment -name VERILOG_FILE output_module.v
-set_global_assignment -name VERILOG_FILE micro_instr.v
-set_global_assignment -name VERILOG_FILE control_logic.v
-set_global_assignment -name VERILOG_FILE control_mem.v
-set_global_assignment -name VERILOG_FILE out_mux.v
-set_global_assignment -name VERILOG_FILE Computer_tb.v
-set_global_assignment -name CDF_FILE output_files/Chain1.cdf
-set_global_assignment -name VERILOG_FILE clk_module.v
-set_global_assignment -name VERILOG_FILE mux_val.v
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

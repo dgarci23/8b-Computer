@@ -1,0 +1,6 @@
+module lcd_rom (
+	input [4:0] addr,
+	output reg [7:0] lcd_val
+	);
+	
+	

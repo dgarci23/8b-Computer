@@ -1,0 +1,19 @@
+module add_rom (
+	input [4:0] addr,
+	input [3:0] code,
+	output reg [7:0] lcd_val
+	);
+	
+	always @(*)
+		case (addr)
+			0: lcd_val = "A";
+			1: lcd_val = "D";
+			2: lcd_val = "D";
+			5: lcd_val = code[3];
+			6: lcd_val = code[2];
+			7: lcd_val = code[1];
+			8: lcd_val = code[0];
+			default: lcd_val = " ";
+		endcase
+	
+endmodule

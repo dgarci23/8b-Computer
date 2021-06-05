@@ -1,0 +1,14 @@
+module out_rom (
+	input [4:0] addr,
+	output reg [3:0] label
+	);
+	
+	always @(*)
+		case (addr)
+			0: lcd_val = "O";
+			1: lcd_val = "U";
+			2: lcd_val = "T";
+			default: lcd_val = " ";
+		endcase
+	
+endmodule

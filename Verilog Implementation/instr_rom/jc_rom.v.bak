@@ -1,0 +1,13 @@
+module jc_rom (
+	input [4:0] addr,
+	output reg [4:0] label
+	);
+	
+	always @(*)
+		case (addr)
+			0: lcd_val = "J";
+			1: lcd_val = "C";
+			default: lcd_val = " ";
+		endcase
+	
+endmodule
