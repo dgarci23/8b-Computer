@@ -2,7 +2,7 @@ module output_module (
 	// System Signals
 	input clk,
 	input rst,
-	input CLOCK_27,
+	input CLOCK_50,
 	// Inputs
 	inout [7:0] bus,
 	// Control Signals
@@ -60,7 +60,7 @@ module output_module (
 	LCD_Controller (
 		.lcd_char(lcd_char),
 		.lcd_index(lcd_index),
-		.CLOCK_27(CLOCK_27),
+		.CLOCK_50(CLOCK_50),
 		.LCD_ON(LCD_ON),
 		.LCD_BLON(LCD_BLON),
 		.LCD_RW(LCD_RW),

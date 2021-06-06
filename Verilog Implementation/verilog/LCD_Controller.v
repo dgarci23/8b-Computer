@@ -1,7 +1,7 @@
 module LCD_Controller (
    input    [7:0] lcd_char,  // ascii character to display
    output   [4:0] lcd_index,  // index where character will be displayed
-	input          CLOCK_27,	//	50 MHz clock
+	input          CLOCK_50,	//	50 MHz clock
 	output         LCD_ON,		// LCD Power ON/OFF
 	output         LCD_BLON,	// LCD Back Light ON/OFF
 	output         LCD_RW,		// LCD Read/Write Select, 0 = Write, 1 = Read
@@ -18,13 +18,13 @@ module LCD_Controller (
 
 	// reset delay gives some time for peripherals to initialize
    Reset_Delay r0 (
-      .iCLK		(CLOCK_27),
+      .iCLK		(CLOCK_50),
       .oRESET	(lcd_reset)
 	);
    
    LCD_Display u1(
 	// Host Side
-		.iCLK_50MHZ	(CLOCK_27),
+		.iCLK_50MHZ	(CLOCK_50),
 		.iRST_N		(lcd_reset),
 		.oMSG_INDEX	(lcd_index),
 		.iMSG_ASCII	(lcd_char),

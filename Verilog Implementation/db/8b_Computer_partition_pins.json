@@ -266,10 +266,6 @@
 				{
 					"name" : "CLOCK_50",
 					"strict" : false
-				},
-				{
-					"name" : "CLOCK_27",
-					"strict" : false
 				}
 			]
 		}

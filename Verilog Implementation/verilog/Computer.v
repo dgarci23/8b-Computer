@@ -220,7 +220,7 @@ module Computer(
 		// System Inputs
 		.clk(clk),
 		.rst(rst),
-		.CLOCK_27(CLOCK_27),
+		.CLOCK_50(CLOCK_50),
 		// Inputs
 		.bus(bus),
 		// Control Signals

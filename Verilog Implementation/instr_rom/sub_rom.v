@@ -1,6 +1,7 @@
 module sub_rom (
 	input [4:0] addr,
-	output reg [3:0] label
+	input [3:0] imm4,
+	output reg [7:0] label
 	);
 	
 	always @(*)
@@ -8,6 +9,10 @@ module sub_rom (
 			0: label = "S";
 			1: label = "U";
 			2: label = "B";
+			4: label = imm4[3];
+			5: label = imm4[2];
+			6: label = imm4[1];
+			7: label = imm4[0];
 			default: label = " ";
 		endcase
 	

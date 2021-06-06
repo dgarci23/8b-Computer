@@ -19,94 +19,84 @@ module lcd_rom (
 	
 	add_rom add_rom (
 		.addr(addr),
-		.label(add)
+		.label(add),
+		.imm4(imm4)
 	);
 	
 	lda_rom lda_rom (
 		.addr(addr),
-		.label(lda)
+		.label(lda),
+		.imm4(imm4)
 	);
 	
 	np_rom np_rom (
 		.addr(addr),
-		.label(np)
+		.label(np),
+		.imm4(imm4)
 	);
 	
 	sub_rom sub_rom (
 		.addr(addr),
-		.label(sub)
+		.label(sub),
+		.imm4(imm4)
 	);
 	
 	sta_rom sta_rom (
 		.addr(addr),
-		.label(sta)
+		.label(sta),
+		.imm4(imm4)
 	);
 	
 	ldi_rom ldi_rom (
 		.addr(addr),
-		.label(ldi)
+		.label(ldi),
+		.imm4(imm4)
 	);
 	
 	jmp_rom jmp_rom (
 		.addr(addr),
-		.label(jmp)
+		.label(jmp),
+		.imm4(imm4)
 	);
 	
 	jc_rom jc_rom (
 		.addr(addr),
-		.label(jc)
+		.label(jc),
+		.imm4(imm4)
 	);
 	
 	jz_rom jz_rom (
 		.addr(addr),
-		.label(jz)
+		.label(jz),
+		.imm4(imm4)
 	);
 	
 	out_rom out_rom (
 		.addr(addr),
-		.label(out)
+		.label(out),
+		.imm4(imm4)
 	);
 	
 	hlt_rom hlt_rom (
 		.addr(addr),
-		.label(hlt)
+		.label(hlt),
+		.imm4(imm4)
 	);
 	
 	always @(*)
 		case (opcode)
-			0001: begin
-				lcd_val = {lda, imm4};
-				end
-			0010: begin
-				lcd_val = {add, imm4};
-				end
-			0011: begin
-				lcd_val = {sub, imm4};
-				end
-			0100: begin
-				lcd_val = {sta, imm4};
-				end
-			0101: begin
-				lcd_val = {ldi, imm4};
-				end
-			0110: begin
-				lcd_val = {jmp, imm4};
-				end
-			0111: begin
-				lcd_val = {jc, imm4};
-				end
-			1000: begin
-				lcd_val = {jz, imm4};
-				end
-			1110: begin
-				lcd_val = {out, imm4};
-				end
-			1111: begin
-				lcd_val = {hlt, imm4};
-				end
-			default: begin
-				lcd_val = {np, imm4};
-				end
+			4'b0001: lcd_val = lda;
+			4'b0010: lcd_val = add;
+			4'b0011: lcd_val = sub;
+			4'b0100: lcd_val = sta;
+			4'b0101: lcd_val = ldi;
+			4'b0110: lcd_val = jmp;
+			4'b0111: lcd_val = jc;
+			4'b1000: lcd_val = jz;
+			4'b1110: lcd_val = out;
+			4'b1111: lcd_val = hlt;
+			default: lcd_val = np;
+				
 		endcase
 	
 endmodule
