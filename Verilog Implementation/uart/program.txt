@@ -1,0 +1,5 @@
+LDI 5
+STA 8
+ADD 8
+OUT
+HLT

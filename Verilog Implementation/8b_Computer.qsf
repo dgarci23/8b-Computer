@@ -1107,6 +1107,14 @@ set_location_assignment PIN_G24 -to HSMC_CLKOUT_N1
 set_instance_assignment -name IO_STANDARD LVDS -to HSMC_CLKOUT_N1
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE uart/udcount_de2.v
+set_global_assignment -name VERILOG_FILE uart/udcount.v
+set_global_assignment -name VERILOG_FILE uart/UART_TX.v
+set_global_assignment -name VERILOG_FILE uart/UART_RX.v
+set_global_assignment -name VERILOG_FILE uart/UART_Loopback_Top.v
+set_global_assignment -name VERILOG_FILE uart/edge_detect_tb.v
+set_global_assignment -name VERILOG_FILE uart/edge_detect.v
+set_global_assignment -name VERILOG_FILE uart/debounce.v
 set_global_assignment -name VERILOG_FILE verilog/seven_seg.v
 set_global_assignment -name VERILOG_FILE verilog/reset_delay.v
 set_global_assignment -name VERILOG_FILE verilog/register_array.v
@@ -1144,7 +1152,11 @@ set_global_assignment -name VERILOG_FILE instr_rom/jc_rom.v
 set_global_assignment -name VERILOG_FILE instr_rom/jz_rom.v
 set_global_assignment -name VERILOG_FILE instr_rom/out_rom.v
 set_global_assignment -name VERILOG_FILE instr_rom/hlt_rom.v
+set_global_assignment -name SOURCE_FILE db/8b_Computer.cmp.rdb
+set_global_assignment -name VERILOG_FILE uart/uart_io.v
+set_global_assignment -name VERILOG_FILE uart/uart_pc.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE verilog/debounce.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

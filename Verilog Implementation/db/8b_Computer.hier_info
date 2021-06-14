@@ -1,8 +1,7 @@
 |Computer
-CLOCK_27 => ~NO_FANOUT~
-CLOCK_50 => CLOCK_50.IN1
+CLOCK_50 => CLOCK_50.IN3
 KEY[0] => rst.IN7
-KEY[1] => MANUAL.IN1
+KEY[1] => KEY[1].IN1
 KEY[2] => manual_WE.IN2
 KEY[3] => ~NO_FANOUT~
 SW[0] => SELECTOR.IN1
@@ -62,6 +61,14 @@ LEDR[14] <= manual_addr[0].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[15] <= manual_addr[1].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[16] <= manual_addr[2].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[17] <= manual_addr[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= mem_out[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= mem_out[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= mem_out[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= mem_out[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[4] <= mem_out[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[5] <= mem_out[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[6] <= mem_out[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[7] <= mem_out[7].DB_MAX_OUTPUT_PORT_TYPE
 LCD_ON <= output_module:output_module.LCD_ON
 LCD_BLON <= output_module:output_module.LCD_BLON
 LCD_RW <= output_module:output_module.LCD_RW
@@ -75,6 +82,8 @@ LCD_DATA[4] <= output_module:output_module.LCD_DATA
 LCD_DATA[5] <= output_module:output_module.LCD_DATA
 LCD_DATA[6] <= output_module:output_module.LCD_DATA
 LCD_DATA[7] <= output_module:output_module.LCD_DATA
+UART_RXD => UART_RXD.IN1
+UART_TXD <= uart_io:uart_io.UART_TXD
 
 
 |Computer|clk_module:clk_module
@@ -84,6 +93,31 @@ SELECTOR => CLK.OUTPUTSELECT
 PROGRAM => CLK.OUTPUTSELECT
 manual_WE => CLK.DATAB
 CLK <= CLK.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Computer|debounce:clk_debounce
+CLOCK_50 => count[0].CLK
+CLOCK_50 => count[1].CLK
+CLOCK_50 => count[2].CLK
+CLOCK_50 => count[3].CLK
+CLOCK_50 => count[4].CLK
+CLOCK_50 => count[5].CLK
+CLOCK_50 => count[6].CLK
+CLOCK_50 => count[7].CLK
+CLOCK_50 => count[8].CLK
+CLOCK_50 => count[9].CLK
+CLOCK_50 => count[10].CLK
+CLOCK_50 => count[11].CLK
+CLOCK_50 => count[12].CLK
+CLOCK_50 => count[13].CLK
+CLOCK_50 => count[14].CLK
+CLOCK_50 => count[15].CLK
+CLOCK_50 => count[16].CLK
+CLOCK_50 => count[17].CLK
+CLOCK_50 => count[18].CLK
+CLOCK_50 => count[19].CLK
+in => out~reg0.DATAIN
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Computer|ALU_Register:ALU_Register
@@ -303,6 +337,19 @@ data_reg[7] <= data_reg[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 clk => clk.IN1
 rst => rst.IN1
 manual_WE => manual_WE.IN1
+serial_WE => serial_WE.IN4
+serial_addr[0] => serial_addr[0].IN1
+serial_addr[1] => serial_addr[1].IN1
+serial_addr[2] => serial_addr[2].IN1
+serial_addr[3] => serial_addr[3].IN1
+serial_value[0] => serial_value[0].IN1
+serial_value[1] => serial_value[1].IN1
+serial_value[2] => serial_value[2].IN1
+serial_value[3] => serial_value[3].IN1
+serial_value[4] => serial_value[4].IN1
+serial_value[5] => serial_value[5].IN1
+serial_value[6] => serial_value[6].IN1
+serial_value[7] => serial_value[7].IN1
 WE => WE.IN1
 MI => MI.IN1
 bus[0] => bus[0].IN2
@@ -337,6 +384,25 @@ mem_out[7] <= mem_array.DATAOUT7
 
 
 |Computer|memory:memory|mux_addr:mux_addr
+in0[0] => out.DATAA
+in0[1] => out.DATAA
+in0[2] => out.DATAA
+in0[3] => out.DATAA
+in1[0] => out.DATAB
+in1[1] => out.DATAB
+in1[2] => out.DATAB
+in1[3] => out.DATAB
+SEL => out.OUTPUTSELECT
+SEL => out.OUTPUTSELECT
+SEL => out.OUTPUTSELECT
+SEL => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Computer|memory:memory|mux_addr:mux_addr_serial
 in0[0] => out.DATAA
 in0[1] => out.DATAA
 in0[2] => out.DATAA
@@ -390,7 +456,49 @@ out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|Computer|memory:memory|mux_val:mux_val_serial
+in0[0] => out.DATAA
+in0[1] => out.DATAA
+in0[2] => out.DATAA
+in0[3] => out.DATAA
+in0[4] => out.DATAA
+in0[5] => out.DATAA
+in0[6] => out.DATAA
+in0[7] => out.DATAA
+in1[0] => out.DATAB
+in1[1] => out.DATAB
+in1[2] => out.DATAB
+in1[3] => out.DATAB
+in1[4] => out.DATAB
+in1[5] => out.DATAB
+in1[6] => out.DATAB
+in1[7] => out.DATAB
+SEL => out.OUTPUTSELECT
+SEL => out.OUTPUTSELECT
+SEL => out.OUTPUTSELECT
+SEL => out.OUTPUTSELECT
+SEL => out.OUTPUTSELECT
+SEL => out.OUTPUTSELECT
+SEL => out.OUTPUTSELECT
+SEL => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |Computer|memory:memory|mux_write:mux_write
+WE => sel_WE.DATAA
+manual_WE => sel_WE.DATAB
+SEL => sel_WE.OUTPUTSELECT
+sel_WE <= sel_WE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Computer|memory:memory|mux_write:mux_write_serial
 WE => sel_WE.DATAA
 manual_WE => sel_WE.DATAB
 SEL => sel_WE.OUTPUTSELECT
@@ -659,6 +767,129 @@ sel_signal[4] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
 sel_signal[5] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
 sel_signal[6] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
 sel_signal[7] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Computer|uart_io:uart_io
+CLOCK_50 => i_Clk.IN1
+UART_RXD => i_UART_RX.IN1
+UART_TXD <= <VCC>
+value[0] <= uart_pc:uart_pc.value
+value[1] <= uart_pc:uart_pc.value
+value[2] <= uart_pc:uart_pc.value
+value[3] <= uart_pc:uart_pc.value
+value[4] <= uart_pc:uart_pc.value
+value[5] <= uart_pc:uart_pc.value
+value[6] <= uart_pc:uart_pc.value
+value[7] <= uart_pc:uart_pc.value
+addr[0] <= uart_pc:uart_pc.addr
+addr[1] <= uart_pc:uart_pc.addr
+addr[2] <= uart_pc:uart_pc.addr
+addr[3] <= uart_pc:uart_pc.addr
+serial_WE <= w_RX_DV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Computer|uart_io:uart_io|UART_RX:UART_RX_Inst
+i_Clock => r_RX_Byte[0].CLK
+i_Clock => r_RX_Byte[1].CLK
+i_Clock => r_RX_Byte[2].CLK
+i_Clock => r_RX_Byte[3].CLK
+i_Clock => r_RX_Byte[4].CLK
+i_Clock => r_RX_Byte[5].CLK
+i_Clock => r_RX_Byte[6].CLK
+i_Clock => r_RX_Byte[7].CLK
+i_Clock => r_Bit_Index[0].CLK
+i_Clock => r_Bit_Index[1].CLK
+i_Clock => r_Bit_Index[2].CLK
+i_Clock => r_Clock_Count[0].CLK
+i_Clock => r_Clock_Count[1].CLK
+i_Clock => r_Clock_Count[2].CLK
+i_Clock => r_Clock_Count[3].CLK
+i_Clock => r_Clock_Count[4].CLK
+i_Clock => r_Clock_Count[5].CLK
+i_Clock => r_Clock_Count[6].CLK
+i_Clock => r_Clock_Count[7].CLK
+i_Clock => r_Clock_Count[8].CLK
+i_Clock => r_Clock_Count[9].CLK
+i_Clock => r_Clock_Count[10].CLK
+i_Clock => r_Clock_Count[11].CLK
+i_Clock => r_Clock_Count[12].CLK
+i_Clock => r_Clock_Count[13].CLK
+i_Clock => r_Clock_Count[14].CLK
+i_Clock => r_Clock_Count[15].CLK
+i_Clock => r_RX_DV.CLK
+i_Clock => r_SM_Main~1.DATAIN
+i_RX_Serial => r_RX_Byte.DATAB
+i_RX_Serial => r_RX_Byte.DATAB
+i_RX_Serial => r_RX_Byte.DATAB
+i_RX_Serial => r_RX_Byte.DATAB
+i_RX_Serial => r_RX_Byte.DATAB
+i_RX_Serial => r_RX_Byte.DATAB
+i_RX_Serial => r_RX_Byte.DATAB
+i_RX_Serial => r_RX_Byte.DATAB
+i_RX_Serial => Selector20.IN4
+i_RX_Serial => r_SM_Main.DATAB
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_Clock_Count.OUTPUTSELECT
+i_RX_Serial => r_SM_Main.DATAB
+i_RX_Serial => Selector21.IN1
+o_RX_DV <= r_RX_DV.DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[0] <= r_RX_Byte[0].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[1] <= r_RX_Byte[1].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[2] <= r_RX_Byte[2].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[3] <= r_RX_Byte[3].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[4] <= r_RX_Byte[4].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[5] <= r_RX_Byte[5].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[6] <= r_RX_Byte[6].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[7] <= r_RX_Byte[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Computer|uart_io:uart_io|uart_pc:uart_pc
+clk => addr[0]~reg0.CLK
+clk => addr[1]~reg0.CLK
+clk => addr[2]~reg0.CLK
+clk => addr[3]~reg0.CLK
+uart_signal[0] => value[0].DATAIN
+uart_signal[0] => Equal0.IN31
+uart_signal[1] => value[1].DATAIN
+uart_signal[1] => Equal0.IN30
+uart_signal[2] => value[2].DATAIN
+uart_signal[2] => Equal0.IN29
+uart_signal[3] => value[3].DATAIN
+uart_signal[3] => Equal0.IN28
+uart_signal[4] => value[4].DATAIN
+uart_signal[4] => Equal0.IN27
+uart_signal[5] => value[5].DATAIN
+uart_signal[5] => Equal0.IN26
+uart_signal[6] => value[6].DATAIN
+uart_signal[6] => Equal0.IN25
+uart_signal[7] => value[7].DATAIN
+uart_signal[7] => Equal0.IN24
+value[0] <= uart_signal[0].DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= uart_signal[1].DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= uart_signal[2].DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= uart_signal[3].DB_MAX_OUTPUT_PORT_TYPE
+value[4] <= uart_signal[4].DB_MAX_OUTPUT_PORT_TYPE
+value[5] <= uart_signal[5].DB_MAX_OUTPUT_PORT_TYPE
+value[6] <= uart_signal[6].DB_MAX_OUTPUT_PORT_TYPE
+value[7] <= uart_signal[7].DB_MAX_OUTPUT_PORT_TYPE
+addr[0] <= addr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+addr[1] <= addr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+addr[2] <= addr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+addr[3] <= addr[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Computer|output_module:output_module

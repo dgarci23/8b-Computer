@@ -96,7 +96,7 @@ void writeInstructions(int pos) {
     opcode(0, pos, (flag<<7)|0b0111011);
     opcode(0, pos, (flag<<7)|0b0111100);
 
-    // JZ
+    // JZ 1000
     if (flag|0b10 == 0b10) {
       opcode(0, pos, (flag<<7)|0b1000010);
     } else if (flag&0b01 == 0b01) {
@@ -105,12 +105,12 @@ void writeInstructions(int pos) {
     opcode(0, pos, (flag<<7)|0b1000011);
     opcode(0, pos, (flag<<7)|0b1000100);
 
-    // OUT
+    // OUT 1110
     opcode(AO|OI, pos, (flag<<7)|0b1110010);
     opcode(0, pos, (flag<<7)|0b1110011);
     opcode(0, pos, (flag<<7)|0b1110100);
 
-    // HLT
+    // HLT 1111
     opcode(HLT, pos, (flag<<7)|0b1111010);
     opcode(0, pos, (flag<<7)|0b1111011);
     opcode(0, pos, (flag<<7)|0b1111100);

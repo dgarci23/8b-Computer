@@ -12,7 +12,6 @@ Important Things:
 
 module Computer(
 	// Clocks
-	input CLOCK_27,
 	input CLOCK_50,
 	// Push buttons
 	input [3:0] KEY,
@@ -24,18 +23,22 @@ module Computer(
 	output [6:0] HEX2,
 	// LEDs
 	output [17:0] LEDR,
+	output [7:0] LEDG,
 	// LCD Display
 	output LCD_ON,
 	output LCD_BLON,
 	output LCD_RW,
 	output LCD_EN,
 	output LCD_RS,
-	output [7:0] LCD_DATA
+	output [7:0] LCD_DATA,
+	// Serial
+   input UART_RXD,
+   output UART_TXD	
 	);
 
 	// Inner Variables
 	wire [7:0] bus;
-	wire clk, AUTO, MANUAL, SELECTOR;
+	wire clk, AUTO, MANUAL, SELECTOR, key1_debounce;
 	wire rst;
 	wire [2:0] micro;
 	wire [3:0] opcode;
@@ -63,7 +66,7 @@ module Computer(
 	
 	// Relations
 	assign AUTO = CLOCK_50 && (~HLT);
-	assign MANUAL = ~KEY[1] && (~HLT); 
+	assign MANUAL = ~(key1_debounce) && (~HLT); 
 	assign LEDR[1] = MANUAL;
 	assign SELECTOR = SW[0];
 	assign LEDR[2] = SELECTOR;
@@ -84,6 +87,12 @@ module Computer(
 	assign LEDR[4] = manual_WE;
 	assign LEDR[5] = PROG;
 	
+	// Serial
+	
+	wire [3:0] serial_addr;
+	wire [7:0] serial_value;
+	wire serial_WE;
+	
 	// Clock Module
 	clk_module clk_module (
 		.AUTO(AUTO),
@@ -92,6 +101,12 @@ module Computer(
 		.manual_WE(manual_WE),
 		.SELECTOR(SELECTOR),
 		.CLK(clk)
+	);
+	
+	debounce clk_debounce (
+		.CLOCK_50(CLOCK_50),
+		.in(KEY[1]),
+		.out(key1_debounce)
 	);
 	
 	// Registers and ALU
@@ -121,6 +136,10 @@ module Computer(
 		.rst(rst),
 		// Manual control signals
 		.manual_WE(manual_WE),
+		// Serial inputs
+		.serial_addr(serial_addr),
+		.serial_value(serial_value),
+		.serial_WE(serial_WE),
 		// Control Signals
 		.WE(WE),
 		.MI(MI),
@@ -212,6 +231,21 @@ module Computer(
 		.instr_out(instr_out),
 		// Selected signal in the bus
 		.sel_signal(bus)
+	);
+	
+	assign LEDG = mem_out;
+	
+	// Serial comm
+		uart_io uart_io (
+		// System Inputs
+		.CLOCK_50(CLOCK_50),
+		// UART in and out
+		.UART_RXD(UART_RXD),
+		.UART_TXD(UART_TXD),
+		// Memory value, address and control signal
+		.value(serial_value),
+		.addr(serial_addr),
+		.serial_WE(serial_WE)
 	);
 		
 	
