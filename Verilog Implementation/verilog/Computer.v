@@ -65,8 +65,9 @@ module Computer(
 	wire ZERO, CARRY, FZ, FC;
 	
 	// Relations
-	assign AUTO = CLOCK_50 && (~HLT);
-	assign MANUAL = ~(key1_debounce) && (~HLT); 
+	assign AUTO = CLOCK_50;
+	assign MANUAL = ~(key1_debounce); 
+	wire clk_sel;
 	assign LEDR[1] = MANUAL;
 	assign SELECTOR = SW[0];
 	assign LEDR[2] = SELECTOR;
@@ -100,8 +101,10 @@ module Computer(
 		.PROGRAM(PROG),
 		.manual_WE(manual_WE),
 		.SELECTOR(SELECTOR),
-		.CLK(clk)
+		.CLK(clk_sel)
 	);
+	
+	assign clk = clk_sel && (~HLT);
 	
 	debounce clk_debounce (
 		.CLOCK_50(CLOCK_50),
@@ -132,7 +135,7 @@ module Computer(
 	// Memory
 	memory memory (
 		// System Inputs
-		.clk(clk),
+		.clk(clk_sel),
 		.rst(rst),
 		// Manual control signals
 		.manual_WE(manual_WE),
@@ -233,10 +236,10 @@ module Computer(
 		.sel_signal(bus)
 	);
 	
-	assign LEDG = mem_out;
+	// assign LEDG = mem_out;
 	
 	// Serial comm
-		uart_io uart_io (
+	uart_io uart_io (
 		// System Inputs
 		.CLOCK_50(CLOCK_50),
 		// UART in and out
@@ -245,7 +248,8 @@ module Computer(
 		// Memory value, address and control signal
 		.value(serial_value),
 		.addr(serial_addr),
-		.serial_WE(serial_WE)
+		.serial_WE(serial_WE),
+		.led(LEDG[3:0])
 	);
 		
 	

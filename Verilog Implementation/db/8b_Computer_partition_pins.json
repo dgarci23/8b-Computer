@@ -172,22 +172,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDG[4]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDG[5]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDG[6]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDG[7]",
-					"strict" : false
-				},
-				{
 					"name" : "LCD_EN",
 					"strict" : false
 				},

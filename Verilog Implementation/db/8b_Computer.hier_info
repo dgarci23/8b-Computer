@@ -1,5 +1,5 @@
 |Computer
-CLOCK_50 => CLOCK_50.IN3
+CLOCK_50 => CLOCK_50.IN4
 KEY[0] => rst.IN7
 KEY[1] => KEY[1].IN1
 KEY[2] => manual_WE.IN2
@@ -61,14 +61,14 @@ LEDR[14] <= manual_addr[0].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[15] <= manual_addr[1].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[16] <= manual_addr[2].DB_MAX_OUTPUT_PORT_TYPE
 LEDR[17] <= manual_addr[3].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[0] <= mem_out[0].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[1] <= mem_out[1].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[2] <= mem_out[2].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[3] <= mem_out[3].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[4] <= mem_out[4].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[5] <= mem_out[5].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[6] <= mem_out[6].DB_MAX_OUTPUT_PORT_TYPE
-LEDG[7] <= mem_out[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= uart_io:uart_io.led
+LEDG[1] <= uart_io:uart_io.led
+LEDG[2] <= uart_io:uart_io.led
+LEDG[3] <= uart_io:uart_io.led
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= <GND>
 LCD_ON <= output_module:output_module.LCD_ON
 LCD_BLON <= output_module:output_module.LCD_BLON
 LCD_RW <= output_module:output_module.LCD_RW
@@ -786,6 +786,10 @@ addr[1] <= uart_pc:uart_pc.addr
 addr[2] <= uart_pc:uart_pc.addr
 addr[3] <= uart_pc:uart_pc.addr
 serial_WE <= w_RX_DV.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= uart_pc:uart_pc.led
+led[1] <= uart_pc:uart_pc.led
+led[2] <= uart_pc:uart_pc.led
+led[3] <= uart_pc:uart_pc.led
 
 
 |Computer|uart_io:uart_io|UART_RX:UART_RX_Inst
@@ -890,6 +894,10 @@ addr[0] <= addr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 addr[1] <= addr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 addr[2] <= addr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 addr[3] <= addr[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= addr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= addr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= addr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= addr[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Computer|output_module:output_module

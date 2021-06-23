@@ -3,48 +3,48 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -8.799
-TNS   : -1668.966
+Slack : -9.546
+TNS   : -1808.067
 
 Type  : Slow 1200mV 85C Model Setup 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
-Slack : -4.306
-TNS   : -52.850
+Slack : -4.146
+TNS   : -54.974
 
 Type  : Slow 1200mV 85C Model Setup 'uart_io:uart_io|UART_RX:UART_RX_Inst|r_RX_DV'
-Slack : -0.702
-TNS   : -2.389
+Slack : -0.619
+TNS   : -1.495
+
+Type  : Slow 1200mV 85C Model Hold 'uart_io:uart_io|UART_RX:UART_RX_Inst|r_RX_DV'
+Slack : 0.230
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.370
+Slack : 0.256
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
 Slack : 0.404
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'uart_io:uart_io|UART_RX:UART_RX_Inst|r_RX_DV'
-Slack : 0.404
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
-Slack : -0.734
-TNS   : -10.604
+Slack : -0.732
+TNS   : -10.192
 
 Type  : Slow 1200mV 85C Model Recovery 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
-Slack : -0.652
-TNS   : -8.476
+Slack : -0.562
+TNS   : -6.814
 
 Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
 Slack : 0.802
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
-Slack : 0.986
+Slack : 0.847
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -326.820
+TNS   : -352.520
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
 Slack : -1.285
@@ -54,24 +54,28 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uart_io:uart_io|UART_RX:UART_
 Slack : -1.285
 TNS   : -5.140
 
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'debounce:clk_debounce|count[19]'
+Slack : -1.285
+TNS   : -1.285
+
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -7.980
-TNS   : -1510.981
+Slack : -8.817
+TNS   : -1643.040
 
 Type  : Slow 1200mV 0C Model Setup 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
-Slack : -3.841
-TNS   : -45.668
+Slack : -3.740
+TNS   : -47.544
 
 Type  : Slow 1200mV 0C Model Setup 'uart_io:uart_io|UART_RX:UART_RX_Inst|r_RX_DV'
-Slack : -0.540
-TNS   : -1.846
-
-Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.336
-TNS   : 0.000
+Slack : -0.453
+TNS   : -0.975
 
 Type  : Slow 1200mV 0C Model Hold 'uart_io:uart_io|UART_RX:UART_RX_Inst|r_RX_DV'
-Slack : 0.353
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.209
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
@@ -79,24 +83,24 @@ Slack : 0.354
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
-Slack : -0.550
-TNS   : -7.180
+Slack : -0.549
+TNS   : -6.899
 
 Type  : Slow 1200mV 0C Model Recovery 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
-Slack : -0.531
-TNS   : -6.903
+Slack : -0.414
+TNS   : -4.926
 
 Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
-Slack : 0.737
+Slack : 0.740
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
-Slack : 0.855
+Slack : 0.784
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -326.820
+TNS   : -352.520
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
 Slack : -1.285
@@ -106,49 +110,53 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uart_io:uart_io|UART_RX:UART_R
 Slack : -1.285
 TNS   : -5.140
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'debounce:clk_debounce|count[19]'
+Slack : -1.285
+TNS   : -1.285
+
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -4.065
-TNS   : -733.173
+Slack : -4.373
+TNS   : -780.992
 
 Type  : Fast 1200mV 0C Model Setup 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
-Slack : -1.551
-TNS   : -12.343
+Slack : -1.506
+TNS   : -12.464
 
 Type  : Fast 1200mV 0C Model Setup 'uart_io:uart_io|UART_RX:UART_RX_Inst|r_RX_DV'
-Slack : 0.162
+Slack : 0.211
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.142
+Slack : 0.003
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'uart_io:uart_io|UART_RX:UART_RX_Inst|r_RX_DV'
-Slack : 0.178
+Slack : 0.031
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
-Slack : 0.182
+Slack : 0.183
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
-Slack : 0.119
+Slack : 0.124
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
-Slack : 0.171
+Slack : 0.190
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
-Slack : 0.349
+Slack : 0.315
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
-Slack : 0.375
+Slack : 0.370
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -333.706
+TNS   : -352.315
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|CLK_400HZ'
 Slack : -1.000
@@ -157,5 +165,9 @@ TNS   : -38.000
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uart_io:uart_io|UART_RX:UART_RX_Inst|r_RX_DV'
 Slack : -1.000
 TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'debounce:clk_debounce|count[19]'
+Slack : -1.000
+TNS   : -1.000
 
 ------------------------------------------------------------

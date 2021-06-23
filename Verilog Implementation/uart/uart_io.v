@@ -4,7 +4,8 @@ module uart_io (
    output         UART_TXD,
 	output [7:0]   value,
 	output [3:0] 	addr,
-	output         serial_WE
+	output         serial_WE,
+	output [3:0] led
    );
  
 	wire i_Clk      = CLOCK_50;
@@ -37,7 +38,8 @@ module uart_io (
 		.clk(w_RX_DV),
 		.uart_signal(w_RX_Byte),
 		.addr(addr),
-		.value(value)
+		.value(value),
+		.led(led)
 	);
 
 	// Drive UART line high when transmitter is not active
