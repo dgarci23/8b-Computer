@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_files/") File("8b_Computer.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/output_files/") File("8b_Computer.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
