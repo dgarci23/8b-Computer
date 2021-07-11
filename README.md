@@ -7,7 +7,3 @@ The project consists of three parts:
 - FPGA implementation in an Altera DE2-115 using Verilog and Quartus.
 
 # Hardware Design
-
-Some images of the design:
-### Clock Module
-![Clock Module]("BreadBoard Implementation/Multimedia Documentation/Clock Final.jpeg")
