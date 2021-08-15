@@ -10,4 +10,4 @@ The project consists of three parts:
 
 Some images of the design:
 ### Clock Module
-![Clock Module]("BreadBoard Implementation/Multimedia Documentation/Clock Final.jpeg")
+![Clock Module](BreadBoard Implementation/Multimedia Documentation/Clock Final.jpeg")

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 8b_Computer
-Thu Jun 17 22:05:58 2021
+Tue Jul 13 10:07:06 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,23 +15,26 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |Computer|output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|next_command
   9. State Machine - |Computer|output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|state
- 10. State Machine - |Computer|uart_io:uart_io|UART_RX:UART_RX_Inst|r_SM_Main
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: uart_io:uart_io|UART_RX:UART_RX_Inst
- 15. Parameter Settings for User Entity Instance: output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1
- 16. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Mod0
- 17. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div0
- 18. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Mod1
- 19. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div1
- 20. Port Connectivity Checks: "output_module:output_module|seven_seg:hundreds"
- 21. Port Connectivity Checks: "output_module:output_module|seven_seg:tens"
- 22. Port Connectivity Checks: "output_module:output_module|seven_seg:units"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
- 26. Analysis & Synthesis Suppressed Messages
+ 10. State Machine - |Computer|uart_io:uart_io|UART_TX:UART_TX_Inst|r_SM_Main
+ 11. State Machine - |Computer|uart_io:uart_io|UART_RX:UART_RX_Inst|r_SM_Main
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: uart_io:uart_io|UART_RX:UART_RX_Inst
+ 16. Parameter Settings for User Entity Instance: uart_io:uart_io|UART_TX:UART_TX_Inst
+ 17. Parameter Settings for User Entity Instance: output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1
+ 18. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Mod0
+ 19. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div0
+ 20. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Mod1
+ 21. Parameter Settings for Inferred Entity Instance: output_module:output_module|lpm_divide:Div1
+ 22. Port Connectivity Checks: "output_module:output_module|seven_seg:hundreds"
+ 23. Port Connectivity Checks: "output_module:output_module|seven_seg:tens"
+ 24. Port Connectivity Checks: "output_module:output_module|seven_seg:units"
+ 25. Port Connectivity Checks: "uart_io:uart_io|uart_pc:uart_pc"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -58,15 +61,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 17 22:05:58 2021       ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 13 10:07:06 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; 8b_Computer                                 ;
 ; Top-level Entity Name              ; Computer                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 903                                         ;
-;     Total combinational functions  ; 748                                         ;
-;     Dedicated logic registers      ; 315                                         ;
-; Total registers                    ; 315                                         ;
+; Total logic elements               ; 959                                         ;
+;     Total combinational functions  ; 796                                         ;
+;     Dedicated logic registers      ; 350                                         ;
+; Total registers                    ; 350                                         ;
 ; Total pins                         ; 85                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -174,71 +177,71 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-6         ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                         ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
-; uart/UART_RX.v                   ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v             ;         ;
-; verilog/seven_seg.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/seven_seg.v        ;         ;
-; verilog/reset_delay.v            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/reset_delay.v      ;         ;
-; verilog/register_array.v         ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/register_array.v   ;         ;
-; verilog/register.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/register.v         ;         ;
-; verilog/ProgramCounter.v         ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/ProgramCounter.v   ;         ;
-; verilog/output_reg.v             ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_reg.v       ;         ;
-; verilog/output_module.v          ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v    ;         ;
-; verilog/out_mux.v                ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/out_mux.v          ;         ;
-; verilog/mux_write.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/mux_write.v        ;         ;
-; verilog/mux_val.v                ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/mux_val.v          ;         ;
-; verilog/mux_addr.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/mux_addr.v         ;         ;
-; verilog/micro_instr.v            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/micro_instr.v      ;         ;
-; verilog/memory.v                 ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/memory.v           ;         ;
-; verilog/LCD_Display.v            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/LCD_Display.v      ;         ;
-; verilog/LCD_Controller.v         ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/LCD_Controller.v   ;         ;
-; verilog/InstructionReg.v         ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/InstructionReg.v   ;         ;
-; verilog/flag_register.v          ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/flag_register.v    ;         ;
-; verilog/control_mem.v            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/control_mem.v      ;         ;
-; verilog/control_logic.v          ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/control_logic.v    ;         ;
-; verilog/Computer.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v         ;         ;
-; verilog/clk_module.v             ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/clk_module.v       ;         ;
-; verilog/ALU_Register.v           ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/ALU_Register.v     ;         ;
-; verilog/ALU.v                    ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/ALU.v              ;         ;
-; verilog/address_reg.v            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/address_reg.v      ;         ;
-; verilog/lcd_rom.v                ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v          ;         ;
-; instr_rom/add_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/add_rom.v        ;         ;
-; instr_rom/lda_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/lda_rom.v        ;         ;
-; instr_rom/np_rom.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/np_rom.v         ;         ;
-; instr_rom/sub_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/sub_rom.v        ;         ;
-; instr_rom/sta_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/sta_rom.v        ;         ;
-; instr_rom/ldi_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/ldi_rom.v        ;         ;
-; instr_rom/jmp_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/jmp_rom.v        ;         ;
-; instr_rom/jc_rom.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/jc_rom.v         ;         ;
-; instr_rom/jz_rom.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/jz_rom.v         ;         ;
-; instr_rom/out_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/out_rom.v        ;         ;
-; instr_rom/hlt_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/hlt_rom.v        ;         ;
-; uart/uart_io.v                   ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_io.v             ;         ;
-; uart/uart_pc.v                   ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_pc.v             ;         ;
-; verilog/debounce.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/debounce.v         ;         ;
-; signals.txt                      ; yes             ; Auto-Found File              ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/signals.txt                ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc               ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc           ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                ;         ;
-; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_m9m.tdf      ;         ;
-; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/sign_div_unsign_bkh.tdf ;         ;
-; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf       ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/add_sub_7pc.tdf         ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/add_sub_8pc.tdf         ;         ;
-; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_jhm.tdf      ;         ;
-; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_mhm.tdf      ;         ;
-; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/sign_div_unsign_ekh.tdf ;         ;
-; db/alt_u_div_g4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_g4f.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
+; uart/UART_TX.v                   ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v             ;         ;
+; uart/UART_RX.v                   ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v             ;         ;
+; verilog/seven_seg.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/seven_seg.v        ;         ;
+; verilog/reset_delay.v            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/reset_delay.v      ;         ;
+; verilog/register_array.v         ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/register_array.v   ;         ;
+; verilog/register.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/register.v         ;         ;
+; verilog/ProgramCounter.v         ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/ProgramCounter.v   ;         ;
+; verilog/output_reg.v             ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_reg.v       ;         ;
+; verilog/output_module.v          ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v    ;         ;
+; verilog/out_mux.v                ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/out_mux.v          ;         ;
+; verilog/mux_write.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/mux_write.v        ;         ;
+; verilog/mux_val.v                ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/mux_val.v          ;         ;
+; verilog/mux_addr.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/mux_addr.v         ;         ;
+; verilog/micro_instr.v            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/micro_instr.v      ;         ;
+; verilog/memory.v                 ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/memory.v           ;         ;
+; verilog/LCD_Display.v            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/LCD_Display.v      ;         ;
+; verilog/LCD_Controller.v         ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/LCD_Controller.v   ;         ;
+; verilog/InstructionReg.v         ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/InstructionReg.v   ;         ;
+; verilog/flag_register.v          ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/flag_register.v    ;         ;
+; verilog/control_mem.v            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/control_mem.v      ;         ;
+; verilog/control_logic.v          ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/control_logic.v    ;         ;
+; verilog/Computer.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v         ;         ;
+; verilog/clk_module.v             ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/clk_module.v       ;         ;
+; verilog/ALU_Register.v           ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/ALU_Register.v     ;         ;
+; verilog/ALU.v                    ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/ALU.v              ;         ;
+; verilog/address_reg.v            ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/address_reg.v      ;         ;
+; verilog/lcd_rom.v                ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v          ;         ;
+; instr_rom/add_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/add_rom.v        ;         ;
+; instr_rom/lda_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/lda_rom.v        ;         ;
+; instr_rom/np_rom.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/np_rom.v         ;         ;
+; instr_rom/sub_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/sub_rom.v        ;         ;
+; instr_rom/sta_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/sta_rom.v        ;         ;
+; instr_rom/ldi_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/ldi_rom.v        ;         ;
+; instr_rom/jmp_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/jmp_rom.v        ;         ;
+; instr_rom/jc_rom.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/jc_rom.v         ;         ;
+; instr_rom/jz_rom.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/jz_rom.v         ;         ;
+; instr_rom/out_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/out_rom.v        ;         ;
+; instr_rom/hlt_rom.v              ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/hlt_rom.v        ;         ;
+; uart/uart_io.v                   ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_io.v             ;         ;
+; uart/uart_pc.v                   ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_pc.v             ;         ;
+; verilog/debounce.v               ; yes             ; User Verilog HDL File        ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/debounce.v         ;         ;
+; signals.txt                      ; yes             ; Auto-Found File              ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/signals.txt                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                 ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                      ;         ;
+; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/lpm_divide_m9m.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/lpm_divide_jhm.tdf      ;         ;
+; db/lpm_divide_mhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/lpm_divide_mhm.tdf      ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/sign_div_unsign_ekh.tdf ;         ;
+; db/alt_u_div_g4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/alt_u_div_g4f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------+
@@ -246,20 +249,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Estimated Total logic elements              ; 903                       ;
+; Estimated Total logic elements              ; 959                       ;
 ;                                             ;                           ;
-; Total combinational functions               ; 748                       ;
+; Total combinational functions               ; 796                       ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 364                       ;
-;     -- 3 input functions                    ; 128                       ;
-;     -- <=2 input functions                  ; 256                       ;
+;     -- 4 input functions                    ; 387                       ;
+;     -- 3 input functions                    ; 132                       ;
+;     -- <=2 input functions                  ; 277                       ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 601                       ;
-;     -- arithmetic mode                      ; 147                       ;
+;     -- normal mode                          ; 634                       ;
+;     -- arithmetic mode                      ; 162                       ;
 ;                                             ;                           ;
-; Total registers                             ; 315                       ;
-;     -- Dedicated logic registers            ; 315                       ;
+; Total registers                             ; 350                       ;
+;     -- Dedicated logic registers            ; 350                       ;
 ;     -- I/O registers                        ; 0                         ;
 ;                                             ;                           ;
 ; I/O pins                                    ; 85                        ;
@@ -268,8 +271,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                           ;
 ; Maximum fan-out node                        ; clk_module:clk_module|CLK ;
 ; Maximum fan-out                             ; 133                       ;
-; Total fan-out                               ; 3447                      ;
-; Average fan-out                             ; 2.80                      ;
+; Total fan-out                               ; 3700                      ;
+; Average fan-out                             ; 2.81                      ;
 +---------------------------------------------+---------------------------+
 
 
@@ -278,7 +281,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                   ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Computer                                 ; 748 (1)             ; 315 (0)                   ; 0           ; 0            ; 0       ; 0         ; 85   ; 0            ; |Computer                                                                                                                             ; Computer            ; work         ;
+; |Computer                                 ; 796 (1)             ; 350 (0)                   ; 0           ; 0            ; 0       ; 0         ; 85   ; 0            ; |Computer                                                                                                                             ; Computer            ; work         ;
 ;    |ALU_Register:ALU_Register|            ; 21 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register                                                                                                   ; ALU_Register        ; work         ;
 ;       |ALU:ALU|                           ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|ALU:ALU                                                                                           ; ALU                 ; work         ;
 ;       |register_array:register_array|     ; 0 (0)               ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|ALU_Register:ALU_Register|register_array:register_array                                                                     ; register_array      ; work         ;
@@ -291,10 +294,10 @@ https://fpgasoftware.intel.com/eula.
 ;       |control_mem:control_mem|           ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|control_logic:control_logic|control_mem:control_mem                                                                         ; control_mem         ; work         ;
 ;    |debounce:clk_debounce|                ; 20 (20)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|debounce:clk_debounce                                                                                                       ; debounce            ; work         ;
 ;    |flag_register:flag_reg|               ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|flag_register:flag_reg                                                                                                      ; flag_register       ; work         ;
-;    |memory:memory|                        ; 137 (111)           ; 132 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory                                                                                                               ; memory              ; work         ;
+;    |memory:memory|                        ; 138 (111)           ; 132 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory                                                                                                               ; memory              ; work         ;
 ;       |address_reg:address_reg|           ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|address_reg:address_reg                                                                                       ; address_reg         ; work         ;
 ;       |mux_addr:mux_addr_serial|          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_addr:mux_addr_serial                                                                                      ; mux_addr            ; work         ;
-;       |mux_val:mux_val_serial|            ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_val:mux_val_serial                                                                                        ; mux_val             ; work         ;
+;       |mux_val:mux_val_serial|            ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_val:mux_val_serial                                                                                        ; mux_val             ; work         ;
 ;       |mux_write:mux_write_serial|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|memory:memory|mux_write:mux_write_serial                                                                                    ; mux_write           ; work         ;
 ;    |micro_instr:micro_instr|              ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|micro_instr:micro_instr                                                                                                     ; micro_instr         ; work         ;
 ;    |out_mux:out_mux|                      ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|out_mux:out_mux                                                                                                             ; out_mux             ; work         ;
@@ -326,9 +329,10 @@ https://fpgasoftware.intel.com/eula.
 ;       |seven_seg:hundreds|                ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|seven_seg:hundreds                                                                              ; seven_seg           ; work         ;
 ;       |seven_seg:tens|                    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|seven_seg:tens                                                                                  ; seven_seg           ; work         ;
 ;       |seven_seg:units|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|output_module:output_module|seven_seg:units                                                                                 ; seven_seg           ; work         ;
-;    |uart_io:uart_io|                      ; 70 (0)              ; 37 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|uart_io:uart_io                                                                                                             ; uart_io             ; work         ;
+;    |uart_io:uart_io|                      ; 117 (1)             ; 72 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|uart_io:uart_io                                                                                                             ; uart_io             ; work         ;
 ;       |UART_RX:UART_RX_Inst|              ; 62 (62)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|uart_io:uart_io|UART_RX:UART_RX_Inst                                                                                        ; UART_RX             ; work         ;
-;       |uart_pc:uart_pc|                   ; 8 (8)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|uart_io:uart_io|uart_pc:uart_pc                                                                                             ; uart_pc             ; work         ;
+;       |UART_TX:UART_TX_Inst|              ; 45 (45)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|uart_io:uart_io|UART_TX:UART_TX_Inst                                                                                        ; UART_TX             ; work         ;
+;       |uart_pc:uart_pc|                   ; 9 (9)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computer|uart_io:uart_io|uart_pc:uart_pc                                                                                             ; uart_pc             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -376,6 +380,20 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Computer|uart_io:uart_io|UART_TX:UART_TX_Inst|r_SM_Main                                                             ;
++------------------------+-----------------------+------------------------+------------------------+---------------+-------------------+
+; Name                   ; r_SM_Main.TX_STOP_BIT ; r_SM_Main.TX_DATA_BITS ; r_SM_Main.TX_START_BIT ; r_SM_Main.000 ; r_SM_Main.CLEANUP ;
++------------------------+-----------------------+------------------------+------------------------+---------------+-------------------+
+; r_SM_Main.000          ; 0                     ; 0                      ; 0                      ; 0             ; 0                 ;
+; r_SM_Main.TX_START_BIT ; 0                     ; 0                      ; 1                      ; 1             ; 0                 ;
+; r_SM_Main.TX_DATA_BITS ; 0                     ; 1                      ; 0                      ; 1             ; 0                 ;
+; r_SM_Main.TX_STOP_BIT  ; 1                     ; 0                      ; 0                      ; 1             ; 0                 ;
+; r_SM_Main.CLEANUP      ; 0                     ; 0                      ; 0                      ; 1             ; 1                 ;
++------------------------+-----------------------+------------------------+------------------------+---------------+-------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |Computer|uart_io:uart_io|UART_RX:UART_RX_Inst|r_SM_Main                                                             ;
 +------------------------+-----------------------+------------------------+------------------------+---------------+-------------------+
 ; Name                   ; r_SM_Main.RX_STOP_BIT ; r_SM_Main.RX_DATA_BITS ; r_SM_Main.RX_START_BIT ; r_SM_Main.000 ; r_SM_Main.CLEANUP ;
@@ -402,9 +420,11 @@ Encoding Type:  One-Hot
 ; output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|state~15       ; Lost fanout                            ;
 ; output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|state~16       ; Lost fanout                            ;
 ; output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|state~17       ; Lost fanout                            ;
+; uart_io:uart_io|UART_TX:UART_TX_Inst|r_SM_Main~2                                ; Lost fanout                            ;
+; uart_io:uart_io|UART_TX:UART_TX_Inst|r_SM_Main~3                                ; Lost fanout                            ;
 ; uart_io:uart_io|UART_RX:UART_RX_Inst|r_SM_Main~2                                ; Lost fanout                            ;
 ; uart_io:uart_io|UART_RX:UART_RX_Inst|r_SM_Main~3                                ; Lost fanout                            ;
-; Total Number of Removed Registers = 11                                          ;                                        ;
+; Total Number of Removed Registers = 13                                          ;                                        ;
 +---------------------------------------------------------------------------------+----------------------------------------+
 
 
@@ -413,12 +433,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 315   ;
-; Number of registers using Synchronous Clear  ; 40    ;
+; Total registers                              ; 350   ;
+; Number of registers using Synchronous Clear  ; 56    ;
 ; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 83    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 231   ;
+; Number of registers using Clock Enable       ; 255   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -428,19 +448,31 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Computer|ProgramCounter:ProgramCounter|PC[6]                                                ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Computer|ProgramCounter:ProgramCounter|PC[3]                                                ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |Computer|uart_io:uart_io|UART_RX:UART_RX_Inst|r_Clock_Count[5]                              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Computer|ProgramCounter:ProgramCounter|PC[5]                                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Computer|ProgramCounter:ProgramCounter|PC[0]                                                ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |Computer|uart_io:uart_io|UART_TX:UART_TX_Inst|r_Clock_Count[14]                             ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |Computer|uart_io:uart_io|UART_RX:UART_RX_Inst|r_Clock_Count[0]                              ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |Computer|output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1|DATA_BUS_VALUE[5] ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Computer|memory:memory|mux_val:mux_val_serial|out[0]                                        ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Computer|memory:memory|mux_addr:mux_addr_serial|out[2]                                      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Computer|uart_io:uart_io|UART_TX:UART_TX_Inst|r_Bit_Index                                   ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Computer|uart_io:uart_io|UART_RX:UART_RX_Inst|r_Bit_Index                                   ;
 ; 37:1               ; 4 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |Computer|out_mux:out_mux|Selector3                                                          ;
-; 38:1               ; 4 bits    ; 100 LEs       ; 28 LEs               ; 72 LEs                 ; No         ; |Computer|out_mux:out_mux|Selector6                                                          ;
+; 38:1               ; 4 bits    ; 100 LEs       ; 28 LEs               ; 72 LEs                 ; No         ; |Computer|out_mux:out_mux|Selector7                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: uart_io:uart_io|UART_RX:UART_RX_Inst ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; CLKS_PER_BIT   ; 5208  ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_io:uart_io|UART_TX:UART_TX_Inst ;
 +----------------+-------+----------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                     ;
 +----------------+-------+----------------------------------------------------------+
@@ -590,35 +622,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------+
+; Port Connectivity Checks: "uart_io:uart_io|uart_pc:uart_pc" ;
++------+--------+----------+----------------------------------+
+; Port ; Type   ; Severity ; Details                          ;
++------+--------+----------+----------------------------------+
+; led  ; Output ; Info     ; Explicitly unconnected           ;
++------+--------+----------+----------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 85                          ;
-; cycloneiii_ff         ; 315                         ;
+; cycloneiii_ff         ; 350                         ;
 ;     CLR               ; 19                          ;
 ;     CLR SCLR          ; 20                          ;
-;     ENA               ; 166                         ;
+;     ENA               ; 174                         ;
 ;     ENA CLR           ; 40                          ;
 ;     ENA CLR SCLR SLD  ; 4                           ;
-;     ENA SCLR          ; 16                          ;
+;     ENA SCLR          ; 32                          ;
 ;     ENA SLD           ; 5                           ;
-;     plain             ; 45                          ;
-; cycloneiii_lcell_comb ; 757                         ;
-;     arith             ; 147                         ;
+;     plain             ; 56                          ;
+; cycloneiii_lcell_comb ; 805                         ;
+;     arith             ; 162                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 94                          ;
+;         2 data inputs ; 109                         ;
 ;         3 data inputs ; 52                          ;
-;     normal            ; 610                         ;
+;     normal            ; 643                         ;
 ;         0 data inputs ; 16                          ;
-;         1 data inputs ; 17                          ;
-;         2 data inputs ; 137                         ;
-;         3 data inputs ; 76                          ;
-;         4 data inputs ; 364                         ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 142                         ;
+;         3 data inputs ; 80                          ;
+;         4 data inputs ; 387                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.90                       ;
-; Average LUT depth     ; 7.21                        ;
+; Average LUT depth     ; 6.93                        ;
 +-----------------------+-----------------------------+
 
 
@@ -627,7 +668,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -637,253 +678,256 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Jun 17 22:05:39 2021
+    Info: Processing started: Tue Jul 13 10:06:53 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8b_Computer -c 8b_Computer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file uart/uart_tx.v
-    Info (12023): Found entity 1: UART_TX File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 14
+    Info (12023): Found entity 1: UART_TX File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file uart/uart_rx.v
-    Info (12023): Found entity 1: UART_RX File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 14
+    Info (12023): Found entity 1: UART_RX File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/seven_seg.v
-    Info (12023): Found entity 1: seven_seg File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/seven_seg.v Line: 1
+    Info (12023): Found entity 1: seven_seg File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/seven_seg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/reset_delay.v
-    Info (12023): Found entity 1: Reset_Delay File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/reset_delay.v Line: 1
+    Info (12023): Found entity 1: Reset_Delay File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/reset_delay.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/register_array.v
-    Info (12023): Found entity 1: register_array File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/register_array.v Line: 1
+    Info (12023): Found entity 1: register_array File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/register_array.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/register.v
-    Info (12023): Found entity 1: register File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/register.v Line: 1
+    Info (12023): Found entity 1: register File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/programcounter.v
-    Info (12023): Found entity 1: ProgramCounter File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/ProgramCounter.v Line: 1
+    Info (12023): Found entity 1: ProgramCounter File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/ProgramCounter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/output_reg.v
-    Info (12023): Found entity 1: output_reg File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_reg.v Line: 1
+    Info (12023): Found entity 1: output_reg File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_reg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/output_module.v
-    Info (12023): Found entity 1: output_module File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 1
+    Info (12023): Found entity 1: output_module File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/out_mux.v
-    Info (12023): Found entity 1: out_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/out_mux.v Line: 1
+    Info (12023): Found entity 1: out_mux File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/out_mux.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/mux_write.v
-    Info (12023): Found entity 1: mux_write File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/mux_write.v Line: 1
+    Info (12023): Found entity 1: mux_write File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/mux_write.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/mux_val.v
-    Info (12023): Found entity 1: mux_val File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/mux_val.v Line: 1
+    Info (12023): Found entity 1: mux_val File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/mux_val.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/mux_addr.v
-    Info (12023): Found entity 1: mux_addr File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/mux_addr.v Line: 1
+    Info (12023): Found entity 1: mux_addr File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/mux_addr.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/micro_instr.v
-    Info (12023): Found entity 1: micro_instr File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/micro_instr.v Line: 1
+    Info (12023): Found entity 1: micro_instr File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/micro_instr.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/memory.v
-    Info (12023): Found entity 1: memory File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/memory.v Line: 1
+    Info (12023): Found entity 1: memory File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/memory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/lcd_display.v
-    Info (12023): Found entity 1: LCD_Display File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/LCD_Display.v Line: 40
+    Info (12023): Found entity 1: LCD_Display File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/LCD_Display.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/lcd_controller.v
-    Info (12023): Found entity 1: LCD_Controller File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/LCD_Controller.v Line: 1
+    Info (12023): Found entity 1: LCD_Controller File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/LCD_Controller.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/instructionreg.v
-    Info (12023): Found entity 1: InstructionReg File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/InstructionReg.v Line: 1
+    Info (12023): Found entity 1: InstructionReg File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/InstructionReg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/flag_register.v
-    Info (12023): Found entity 1: flag_register File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/flag_register.v Line: 1
+    Info (12023): Found entity 1: flag_register File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/flag_register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/control_mem.v
-    Info (12023): Found entity 1: control_mem File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 1
+    Info (12023): Found entity 1: control_mem File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/control_logic.v
-    Info (12023): Found entity 1: control_logic File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/control_logic.v Line: 1
+    Info (12023): Found entity 1: control_logic File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/control_logic.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/computer_tb.v
-    Info (12023): Found entity 1: Computer_tb File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer_tb.v Line: 2
+    Info (12023): Found entity 1: Computer_tb File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/computer.v
-    Info (12023): Found entity 1: Computer File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 13
+    Info (12023): Found entity 1: Computer File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/clk_module.v
-    Info (12023): Found entity 1: clk_module File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/clk_module.v Line: 1
+    Info (12023): Found entity 1: clk_module File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/clk_module.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/alu_register.v
-    Info (12023): Found entity 1: ALU_Register File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/ALU_Register.v Line: 1
+    Info (12023): Found entity 1: ALU_Register File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/ALU_Register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/address_reg.v
-    Info (12023): Found entity 1: address_reg File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/address_reg.v Line: 1
+    Info (12023): Found entity 1: address_reg File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/address_reg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/lcd_rom.v
-    Info (12023): Found entity 1: lcd_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 1
+    Info (12023): Found entity 1: lcd_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/add_rom.v
-    Info (12023): Found entity 1: add_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/add_rom.v Line: 1
+    Info (12023): Found entity 1: add_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/add_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/lda_rom.v
-    Info (12023): Found entity 1: lda_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/lda_rom.v Line: 1
+    Info (12023): Found entity 1: lda_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/lda_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/np_rom.v
-    Info (12023): Found entity 1: np_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/np_rom.v Line: 1
+    Info (12023): Found entity 1: np_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/np_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/sub_rom.v
-    Info (12023): Found entity 1: sub_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/sub_rom.v Line: 1
+    Info (12023): Found entity 1: sub_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/sub_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/sta_rom.v
-    Info (12023): Found entity 1: sta_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/sta_rom.v Line: 1
+    Info (12023): Found entity 1: sta_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/sta_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/ldi_rom.v
-    Info (12023): Found entity 1: ldi_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/ldi_rom.v Line: 1
+    Info (12023): Found entity 1: ldi_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/ldi_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/jmp_rom.v
-    Info (12023): Found entity 1: jmp_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/jmp_rom.v Line: 1
+    Info (12023): Found entity 1: jmp_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/jmp_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/jc_rom.v
-    Info (12023): Found entity 1: jc_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/jc_rom.v Line: 1
+    Info (12023): Found entity 1: jc_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/jc_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/jz_rom.v
-    Info (12023): Found entity 1: jz_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/jz_rom.v Line: 1
+    Info (12023): Found entity 1: jz_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/jz_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/out_rom.v
-    Info (12023): Found entity 1: out_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/out_rom.v Line: 1
+    Info (12023): Found entity 1: out_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/out_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file instr_rom/hlt_rom.v
-    Info (12023): Found entity 1: hlt_rom File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/instr_rom/hlt_rom.v Line: 1
+    Info (12023): Found entity 1: hlt_rom File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/instr_rom/hlt_rom.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uart/uart_io.v
-    Info (12023): Found entity 1: uart_io File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 1
+    Info (12023): Found entity 1: uart_io File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uart/uart_pc.v
-    Info (12023): Found entity 1: uart_pc File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_pc.v Line: 1
+    Info (12023): Found entity 1: uart_pc File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_pc.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/debounce.v
-    Info (12023): Found entity 1: debounce File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/debounce.v Line: 1
+    Info (12023): Found entity 1: debounce File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/debounce.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verilog/mem_clk_mux.v
-    Info (12023): Found entity 1: mem_clk_mux File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/mem_clk_mux.v Line: 1
-Warning (10222): Verilog HDL Parameter Declaration warning at UART_TX.v(25): Parameter Declaration in module "UART_TX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 25
-Warning (10222): Verilog HDL Parameter Declaration warning at UART_TX.v(26): Parameter Declaration in module "UART_TX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 26
-Warning (10222): Verilog HDL Parameter Declaration warning at UART_TX.v(27): Parameter Declaration in module "UART_TX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 27
-Warning (10222): Verilog HDL Parameter Declaration warning at UART_TX.v(28): Parameter Declaration in module "UART_TX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 28
-Warning (10222): Verilog HDL Parameter Declaration warning at UART_TX.v(29): Parameter Declaration in module "UART_TX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 29
-Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(23): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 23
-Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(24): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 24
-Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(25): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 25
-Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(26): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 26
-Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(27): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 27
-Critical Warning (10846): Verilog HDL Instantiation warning at output_module.v(70): instance has no name File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 70
+    Info (12023): Found entity 1: mem_clk_mux File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/mem_clk_mux.v Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_TX.v(25): Parameter Declaration in module "UART_TX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 25
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_TX.v(26): Parameter Declaration in module "UART_TX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 26
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_TX.v(27): Parameter Declaration in module "UART_TX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 27
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_TX.v(28): Parameter Declaration in module "UART_TX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 28
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_TX.v(29): Parameter Declaration in module "UART_TX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 29
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(23): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 23
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(24): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 24
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(25): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 25
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(26): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 26
+Warning (10222): Verilog HDL Parameter Declaration warning at UART_RX.v(27): Parameter Declaration in module "UART_RX" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 27
+Critical Warning (10846): Verilog HDL Instantiation warning at output_module.v(70): instance has no name File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 70
 Info (12127): Elaborating entity "Computer" for the top level hierarchy
-Warning (10034): Output port "LEDG[7..4]" at Computer.v(26) has no driver File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 26
-Info (12128): Elaborating entity "clk_module" for hierarchy "clk_module:clk_module" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 105
-Info (12128): Elaborating entity "debounce" for hierarchy "debounce:clk_debounce" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 113
-Info (12128): Elaborating entity "ALU_Register" for hierarchy "ALU_Register:ALU_Register" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 133
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU_Register:ALU_Register|ALU:ALU" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/ALU_Register.v Line: 30
-Info (12128): Elaborating entity "register_array" for hierarchy "ALU_Register:ALU_Register|register_array:register_array" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/ALU_Register.v Line: 44
-Info (12128): Elaborating entity "register" for hierarchy "ALU_Register:ALU_Register|register_array:register_array|register:registerA" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/register_array.v Line: 21
-Info (12128): Elaborating entity "memory" for hierarchy "memory:memory" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 158
-Info (12128): Elaborating entity "mux_addr" for hierarchy "memory:memory|mux_addr:mux_addr" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/memory.v Line: 49
-Info (12128): Elaborating entity "mux_val" for hierarchy "memory:memory|mux_val:mux_val" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/memory.v Line: 65
-Info (12128): Elaborating entity "mux_write" for hierarchy "memory:memory|mux_write:mux_write" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/memory.v Line: 80
-Info (12128): Elaborating entity "address_reg" for hierarchy "memory:memory|address_reg:address_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/memory.v Line: 96
-Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:ProgramCounter" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 172
-Warning (10230): Verilog HDL assignment warning at ProgramCounter.v(25): truncated value with size 32 to match size of target (8) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/ProgramCounter.v Line: 25
-Info (12128): Elaborating entity "InstructionReg" for hierarchy "InstructionReg:InstructionReg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 186
-Info (12128): Elaborating entity "micro_instr" for hierarchy "micro_instr:micro_instr" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 195
-Warning (10230): Verilog HDL assignment warning at micro_instr.v(20): truncated value with size 32 to match size of target (3) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/micro_instr.v Line: 20
-Info (12128): Elaborating entity "flag_register" for hierarchy "flag_register:flag_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 210
-Info (12128): Elaborating entity "control_logic" for hierarchy "control_logic:control_logic" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 222
-Info (12128): Elaborating entity "control_mem" for hierarchy "control_logic:control_logic|control_mem:control_mem" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/control_logic.v Line: 18
-Warning (10030): Net "content.data_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 6
-Warning (10030): Net "content.waddr_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 6
-Warning (10030): Net "content.we_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 6
-Info (12128): Elaborating entity "out_mux" for hierarchy "out_mux:out_mux" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 237
-Info (10264): Verilog HDL Case Statement information at out_mux.v(15): all case item expressions in this case statement are onehot File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/out_mux.v Line: 15
-Info (12128): Elaborating entity "uart_io" for hierarchy "uart_io:uart_io" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 253
-Warning (10858): Verilog HDL warning at uart_io.v(18): object w_TX_Active used but never assigned File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 18
-Warning (10858): Verilog HDL warning at uart_io.v(18): object w_TX_Serial used but never assigned File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 18
-Warning (10030): Net "w_TX_Active" at uart_io.v(18) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 18
-Warning (10030): Net "w_TX_Serial" at uart_io.v(18) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 18
-Info (12128): Elaborating entity "UART_RX" for hierarchy "uart_io:uart_io|UART_RX:UART_RX_Inst" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 27
-Warning (10230): Verilog HDL assignment warning at UART_RX.v(68): truncated value with size 32 to match size of target (16) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 68
-Warning (10230): Verilog HDL assignment warning at UART_RX.v(79): truncated value with size 32 to match size of target (16) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 79
-Warning (10230): Verilog HDL assignment warning at UART_RX.v(90): truncated value with size 32 to match size of target (3) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 90
-Warning (10230): Verilog HDL assignment warning at UART_RX.v(108): truncated value with size 32 to match size of target (16) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 108
-Info (12128): Elaborating entity "uart_pc" for hierarchy "uart_io:uart_io|uart_pc:uart_pc" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 43
-Warning (10230): Verilog HDL assignment warning at uart_pc.v(18): truncated value with size 32 to match size of target (4) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_pc.v Line: 18
-Warning (10230): Verilog HDL assignment warning at uart_pc.v(20): truncated value with size 32 to match size of target (4) File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/uart/uart_pc.v Line: 20
-Info (12128): Elaborating entity "output_module" for hierarchy "output_module:output_module" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 278
-Info (12128): Elaborating entity "output_reg" for hierarchy "output_module:output_module|output_reg:output_reg" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 32
-Info (12128): Elaborating entity "seven_seg" for hierarchy "output_module:output_module|seven_seg:units" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 37
-Info (12128): Elaborating entity "lcd_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 57
-Info (12128): Elaborating entity "add_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|add_rom:add_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 24
-Info (12128): Elaborating entity "lda_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|lda_rom:lda_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 30
-Info (12128): Elaborating entity "np_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|np_rom:np_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 36
-Info (12128): Elaborating entity "sub_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|sub_rom:sub_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 42
-Info (12128): Elaborating entity "sta_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|sta_rom:sta_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 48
-Info (12128): Elaborating entity "ldi_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|ldi_rom:ldi_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 54
-Info (12128): Elaborating entity "jmp_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|jmp_rom:jmp_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 60
-Info (12128): Elaborating entity "jc_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|jc_rom:jc_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 66
-Info (12128): Elaborating entity "jz_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|jz_rom:jz_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 72
-Info (12128): Elaborating entity "out_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|out_rom:out_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 78
-Info (12128): Elaborating entity "hlt_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|hlt_rom:hlt_rom" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 84
-Info (12128): Elaborating entity "LCD_Controller" for hierarchy "output_module:output_module|LCD_Controller:comb_7" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 70
-Info (12128): Elaborating entity "Reset_Delay" for hierarchy "output_module:output_module|LCD_Controller:comb_7|Reset_Delay:r0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/LCD_Controller.v Line: 23
-Info (12128): Elaborating entity "LCD_Display" for hierarchy "output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/LCD_Controller.v Line: 36
+Warning (10034): Output port "LEDG[7..4]" at Computer.v(26) has no driver File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 26
+Info (12128): Elaborating entity "clk_module" for hierarchy "clk_module:clk_module" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 105
+Info (12128): Elaborating entity "debounce" for hierarchy "debounce:clk_debounce" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 113
+Info (12128): Elaborating entity "ALU_Register" for hierarchy "ALU_Register:ALU_Register" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 133
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU_Register:ALU_Register|ALU:ALU" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/ALU_Register.v Line: 30
+Info (12128): Elaborating entity "register_array" for hierarchy "ALU_Register:ALU_Register|register_array:register_array" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/ALU_Register.v Line: 44
+Info (12128): Elaborating entity "register" for hierarchy "ALU_Register:ALU_Register|register_array:register_array|register:registerA" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/register_array.v Line: 21
+Info (12128): Elaborating entity "memory" for hierarchy "memory:memory" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 158
+Info (12128): Elaborating entity "mux_addr" for hierarchy "memory:memory|mux_addr:mux_addr" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/memory.v Line: 49
+Info (12128): Elaborating entity "mux_val" for hierarchy "memory:memory|mux_val:mux_val" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/memory.v Line: 65
+Info (12128): Elaborating entity "mux_write" for hierarchy "memory:memory|mux_write:mux_write" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/memory.v Line: 80
+Info (12128): Elaborating entity "address_reg" for hierarchy "memory:memory|address_reg:address_reg" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/memory.v Line: 96
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:ProgramCounter" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 172
+Warning (10230): Verilog HDL assignment warning at ProgramCounter.v(25): truncated value with size 32 to match size of target (8) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/ProgramCounter.v Line: 25
+Info (12128): Elaborating entity "InstructionReg" for hierarchy "InstructionReg:InstructionReg" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 186
+Info (12128): Elaborating entity "micro_instr" for hierarchy "micro_instr:micro_instr" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 195
+Warning (10230): Verilog HDL assignment warning at micro_instr.v(20): truncated value with size 32 to match size of target (3) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/micro_instr.v Line: 20
+Info (12128): Elaborating entity "flag_register" for hierarchy "flag_register:flag_reg" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 210
+Info (12128): Elaborating entity "control_logic" for hierarchy "control_logic:control_logic" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 222
+Info (12128): Elaborating entity "control_mem" for hierarchy "control_logic:control_logic|control_mem:control_mem" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/control_logic.v Line: 18
+Warning (10030): Net "content.data_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 6
+Warning (10030): Net "content.waddr_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 6
+Warning (10030): Net "content.we_a" at control_mem.v(6) has no driver or initial value, using a default initial value '0' File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 6
+Info (12128): Elaborating entity "out_mux" for hierarchy "out_mux:out_mux" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 237
+Info (10264): Verilog HDL Case Statement information at out_mux.v(15): all case item expressions in this case statement are onehot File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/out_mux.v Line: 15
+Info (12128): Elaborating entity "uart_io" for hierarchy "uart_io:uart_io" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 255
+Warning (10034): Output port "led[3]" at uart_io.v(11) has no driver File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 11
+Warning (10034): Output port "led[1..0]" at uart_io.v(11) has no driver File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 11
+Info (12128): Elaborating entity "UART_RX" for hierarchy "uart_io:uart_io|UART_RX:UART_RX_Inst" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 29
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(68): truncated value with size 32 to match size of target (16) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 68
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(79): truncated value with size 32 to match size of target (16) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 79
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(90): truncated value with size 32 to match size of target (3) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 90
+Warning (10230): Verilog HDL assignment warning at UART_RX.v(108): truncated value with size 32 to match size of target (16) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_RX.v Line: 108
+Info (12128): Elaborating entity "UART_TX" for hierarchy "uart_io:uart_io|UART_TX:UART_TX_Inst" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 37
+Warning (10230): Verilog HDL assignment warning at UART_TX.v(68): truncated value with size 32 to match size of target (16) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 68
+Warning (10230): Verilog HDL assignment warning at UART_TX.v(86): truncated value with size 32 to match size of target (16) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 86
+Warning (10230): Verilog HDL assignment warning at UART_TX.v(96): truncated value with size 32 to match size of target (3) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 96
+Warning (10230): Verilog HDL assignment warning at UART_TX.v(116): truncated value with size 32 to match size of target (16) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/UART_TX.v Line: 116
+Info (12128): Elaborating entity "uart_pc" for hierarchy "uart_io:uart_io|uart_pc:uart_pc" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_io.v Line: 45
+Warning (10230): Verilog HDL assignment warning at uart_pc.v(18): truncated value with size 32 to match size of target (4) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_pc.v Line: 18
+Warning (10230): Verilog HDL assignment warning at uart_pc.v(20): truncated value with size 32 to match size of target (4) File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/uart/uart_pc.v Line: 20
+Info (12128): Elaborating entity "output_module" for hierarchy "output_module:output_module" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 280
+Info (12128): Elaborating entity "output_reg" for hierarchy "output_module:output_module|output_reg:output_reg" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 32
+Info (12128): Elaborating entity "seven_seg" for hierarchy "output_module:output_module|seven_seg:units" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 37
+Info (12128): Elaborating entity "lcd_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 57
+Info (12128): Elaborating entity "add_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|add_rom:add_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 24
+Info (12128): Elaborating entity "lda_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|lda_rom:lda_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 30
+Info (12128): Elaborating entity "np_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|np_rom:np_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 36
+Info (12128): Elaborating entity "sub_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|sub_rom:sub_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 42
+Info (12128): Elaborating entity "sta_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|sta_rom:sta_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 48
+Info (12128): Elaborating entity "ldi_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|ldi_rom:ldi_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 54
+Info (12128): Elaborating entity "jmp_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|jmp_rom:jmp_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 60
+Info (12128): Elaborating entity "jc_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|jc_rom:jc_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 66
+Info (12128): Elaborating entity "jz_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|jz_rom:jz_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 72
+Info (12128): Elaborating entity "out_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|out_rom:out_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 78
+Info (12128): Elaborating entity "hlt_rom" for hierarchy "output_module:output_module|lcd_rom:lcd_rom|hlt_rom:hlt_rom" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/lcd_rom.v Line: 84
+Info (12128): Elaborating entity "LCD_Controller" for hierarchy "output_module:output_module|LCD_Controller:comb_7" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 70
+Info (12128): Elaborating entity "Reset_Delay" for hierarchy "output_module:output_module|LCD_Controller:comb_7|Reset_Delay:r0" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/LCD_Controller.v Line: 23
+Info (12128): Elaborating entity "LCD_Display" for hierarchy "output_module:output_module|LCD_Controller:comb_7|LCD_Display:u1" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/LCD_Controller.v Line: 36
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer clk_module:clk_module|CLK File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/clk_module.v Line: 8
-    Warning (19017): Found clock multiplexer clk_module:clk_module|CLK~0 File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/clk_module.v Line: 8
+    Warning (19017): Found clock multiplexer clk_module:clk_module|CLK File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/clk_module.v Line: 8
+    Warning (19017): Found clock multiplexer clk_module:clk_module|CLK~0 File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/clk_module.v Line: 8
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "control_logic:control_logic|control_mem:control_mem|content" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 6
-    Info (276007): RAM logic "memory:memory|mem_array" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/memory.v Line: 98
+    Info (276007): RAM logic "control_logic:control_logic|control_mem:control_mem|content" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 6
+    Info (276007): RAM logic "memory:memory|mem_array" is uninferred due to asynchronous read logic File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/memory.v Line: 98
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer control_logic:control_logic|control_mem:control_mem|content~0 File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 6
+    Warning (19017): Found clock multiplexer control_logic:control_logic|control_mem:control_mem|content~0 File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/control_mem.v Line: 6
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Mod0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 35
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Div0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Mod1" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Div1" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 45
-Info (12130): Elaborated megafunction instantiation "output_module:output_module|lpm_divide:Mod0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 35
-Info (12133): Instantiated megafunction "output_module:output_module|lpm_divide:Mod0" with the following parameter: File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 35
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Mod0" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 35
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Div0" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 40
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Mod1" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 40
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "output_module:output_module|Div1" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 45
+Info (12130): Elaborated megafunction instantiation "output_module:output_module|lpm_divide:Mod0" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 35
+Info (12133): Instantiated megafunction "output_module:output_module|lpm_divide:Mod0" with the following parameter: File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 35
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m9m.tdf
-    Info (12023): Found entity 1: lpm_divide_m9m File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_m9m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_m9m File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/lpm_divide_m9m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/sign_div_unsign_bkh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/sign_div_unsign_bkh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
-    Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/add_sub_7pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "output_module:output_module|lpm_divide:Div0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 40
-Info (12133): Instantiated megafunction "output_module:output_module|lpm_divide:Div0" with the following parameter: File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 40
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "output_module:output_module|lpm_divide:Div0" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 40
+Info (12133): Instantiated megafunction "output_module:output_module|lpm_divide:Div0" with the following parameter: File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 40
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
-    Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_jhm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "output_module:output_module|lpm_divide:Div1" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 45
-Info (12133): Instantiated megafunction "output_module:output_module|lpm_divide:Div1" with the following parameter: File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 45
+    Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/lpm_divide_jhm.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "output_module:output_module|lpm_divide:Div1" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 45
+Info (12133): Instantiated megafunction "output_module:output_module|lpm_divide:Div1" with the following parameter: File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 45
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mhm.tdf
-    Info (12023): Found entity 1: lpm_divide_mhm File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/lpm_divide_mhm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_mhm File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/lpm_divide_mhm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/sign_div_unsign_ekh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/sign_div_unsign_ekh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g4f.tdf
-    Info (12023): Found entity 1: alt_u_div_g4f File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_g4f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_g4f File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/alt_u_div_g4f.tdf Line: 27
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13044): Always-enabled tri-state buffer(s) removed
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[0]" to the node "LCD_DATA[0]" into a wire File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[1]" to the node "LCD_DATA[1]" into a wire File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[2]" to the node "LCD_DATA[2]" into a wire File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[3]" to the node "LCD_DATA[3]" into a wire File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[4]" to the node "LCD_DATA[4]" into a wire File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[5]" to the node "LCD_DATA[5]" into a wire File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[6]" to the node "LCD_DATA[6]" into a wire File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[7]" to the node "LCD_DATA[7]" into a wire File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[0]" to the node "LCD_DATA[0]" into a wire File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[1]" to the node "LCD_DATA[1]" into a wire File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[2]" to the node "LCD_DATA[2]" into a wire File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[3]" to the node "LCD_DATA[3]" into a wire File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[4]" to the node "LCD_DATA[4]" into a wire File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[5]" to the node "LCD_DATA[5]" into a wire File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[6]" to the node "LCD_DATA[6]" into a wire File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "output_module:output_module|LCD_DATA[7]" to the node "LCD_DATA[7]" into a wire File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/output_module.v Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register micro_instr:micro_instr|micro[2] will power up to Low File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/micro_instr.v Line: 17
-Info (17049): 10 registers lost all their fanouts during netlist optimizations.
+    Critical Warning (18010): Register micro_instr:micro_instr|micro[2] will power up to Low File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/micro_instr.v Line: 17
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "output_module:output_module|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_7_result_int[0]~0" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 62
-    Info (17048): Logic cell "output_module:output_module|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_6_result_int[0]~10" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 57
-Info (144001): Generated suppressed messages file C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_files/8b_Computer.map.smsg
+    Info (17048): Logic cell "output_module:output_module|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_7_result_int[0]~0" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 62
+    Info (17048): Logic cell "output_module:output_module|lpm_divide:Mod1|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider|add_sub_6_result_int[0]~10" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/db/alt_u_div_a4f.tdf Line: 57
+Info (144001): Generated suppressed messages file C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/output_files/8b_Computer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 17
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 19
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/david/Desktop/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 19
-Info (21057): Implemented 1007 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 17
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 19
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/verilog/Computer.v Line: 19
+Info (21057): Implemented 1064 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
     Info (21059): Implemented 61 output pins
-    Info (21061): Implemented 922 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info (21061): Implemented 979 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
     Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Thu Jun 17 22:05:58 2021
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Processing ended: Tue Jul 13 10:07:06 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/david/Desktop/8b-Computer/Verilog Implementation/output_files/8b_Computer.map.smsg.
+The suppressed messages can be found in C:/Users/david/Desktop/Logic Design Projetcs/8b-Computer/Verilog Implementation/output_files/8b_Computer.map.smsg.
 
 

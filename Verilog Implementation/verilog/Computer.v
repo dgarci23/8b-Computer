@@ -242,6 +242,8 @@ module Computer(
 	uart_io uart_io (
 		// System Inputs
 		.CLOCK_50(CLOCK_50),
+		.sel_signal(bus),
+		.OI(OI),
 		// UART in and out
 		.UART_RXD(UART_RXD),
 		.UART_TXD(UART_TXD),

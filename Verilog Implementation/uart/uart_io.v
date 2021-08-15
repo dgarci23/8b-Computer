@@ -1,11 +1,13 @@
 module uart_io (
    input          CLOCK_50,
    input          UART_RXD,
+	input  [7:0]	sel_signal,
+	input 			OI,
    output         UART_TXD,
 	output [7:0]   value,
 	output [3:0] 	addr,
 	output         serial_WE,
-	output [3:0] led
+	output [3:0]   led
    );
  
 	wire i_Clk      = CLOCK_50;
@@ -26,20 +28,20 @@ module uart_io (
 	.o_RX_DV(w_RX_DV),
 	.o_RX_Byte(w_RX_Byte));
 	 
-	/* UART_TX #(.CLKS_PER_BIT(5208)) UART_TX_Inst
+	UART_TX #(.CLKS_PER_BIT(5208)) UART_TX_Inst
 	(.i_Clock(i_Clk),
-	.i_TX_DV(w_RX_DV),      // Pass RX to TX module for loopback
-	.i_TX_Byte(w_RX_Byte),  // Pass RX to TX module for loopback
+	.i_TX_DV(OI),      // Pass RX to TX module for loopback
+	.i_TX_Byte(sel_signal),  // Pass RX to TX module for loopback
 	.o_TX_Active(w_TX_Active),
 	.o_TX_Serial(w_TX_Serial),
-	.o_TX_Done()); */
+	.o_TX_Done(led[2]));
 	
 	uart_pc uart_pc (
 		.clk(w_RX_DV),
 		.uart_signal(w_RX_Byte),
 		.addr(addr),
 		.value(value),
-		.led(led)
+		.led()
 	);
 
 	// Drive UART line high when transmitter is not active
