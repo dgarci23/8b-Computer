@@ -34,6 +34,7 @@ It includes:
 ### Power distribution and issues
 Power distribution was a big challenge to make the computer work. Extensive connection between multiple ground and power lines was necessary to avoid high voltage differences across the computer that was creating bugs in the registers and the bus. Breadboard connections quality was also a problem, since some connections were not smooth and some chips disconnected from its breadboard creating bugs.
 
+For the kiCad schematics of the implementation: [Click here](https://github.com/dgarci23/8b-Computer/blob/main/8'b%20Computer%20Schematics/Plot/8'b%20Computer.pdf)
 
 # FPGA Implementation using Verilog
 Using an Altera DE2-115 FPGA, I translated the breadboard implementation to a Verilog model and uploaded it to the FPGA using Quartus. Some minor changes were made from the Breadboard implementation, but the main functionality and ISA stayed the same. 
