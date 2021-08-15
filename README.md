@@ -40,3 +40,4 @@ Using an Altera DE2-115 FPGA, I translated the breadboard implementation to a Ve
 
 To improve program writing and loading into the FPGA, I developed a Serial terminal on PyGame to write and send programs to the FPGA via a USB-Serial cable and by implementing a program loader using Serial in the FPGA. 
 
+<img alt="PyGame Terminal" src="https://github.com/dgarci23/8b-Computer/blob/main/Verilog%20Implementation/Documentation/Serial%20Terminal.PNG" width="400">
