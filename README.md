@@ -19,7 +19,7 @@ The breadboard implementation consists of:
 - **Output Module**: the output module allows the user to see the results of the execution using 8 segment displays.
 - **Control Unit**: using Flash Memories as "look-up tables" to keep the relationship between instructions and control signals, the Control Unit consists of the control signals that are sent into the different modules of the computer and the Flags Registers that allow for branch operations to work.
 
-![Final Computer Design](https://github.com/dgarci23/8b-Computer/blob/main/Breadboard%20Implementation/Multimedia%20Documentation/Full%20Computer%208b.jpeg)
+<img alt="Final Computer Design" src="https://github.com/dgarci23/8b-Computer/blob/main/Breadboard%20Implementation/Multimedia%20Documentation/Full%20Computer%208b.jpeg" width=600>
 
 ### ISA
 The instruction set architecture for the computer is a custom made ISA for this specific implementation. 
