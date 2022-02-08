@@ -19,7 +19,7 @@ The breadboard implementation consists of:
 - **Output Module**: the output module allows the user to see the results of the execution using 8 segment displays.
 - **Control Unit**: using Flash Memories as "look-up tables" to keep the relationship between instructions and control signals, the Control Unit consists of the control signals that are sent into the different modules of the computer and the Flags Registers that allow for branch operations to work.
 
-![Final Computer Design](https://github.com/dgarci23/8b-Computer/blob/main/Breadboard%20Implementation/Multimedia%20Documentation/Full%20Computer%208b.jpeg)
+<img alt="Final Computer Design" src="https://github.com/dgarci23/8b-Computer/blob/main/Breadboard%20Implementation/Multimedia%20Documentation/Full%20Computer%208b.jpeg" width=600>
 
 ### ISA
 The instruction set architecture for the computer is a custom made ISA for this specific implementation. 
@@ -34,9 +34,13 @@ It includes:
 ### Power distribution and issues
 Power distribution was a big challenge to make the computer work. Extensive connection between multiple ground and power lines was necessary to avoid high voltage differences across the computer that was creating bugs in the registers and the bus. Breadboard connections quality was also a problem, since some connections were not smooth and some chips disconnected from its breadboard creating bugs.
 
+For the kiCad schematics of the implementation: [Click here](https://github.com/dgarci23/8b-Computer/blob/main/8'b%20Computer%20Schematics/Plot/8'b%20Computer.pdf)
 
 # FPGA Implementation using Verilog
 Using an Altera DE2-115 FPGA, I translated the breadboard implementation to a Verilog model and uploaded it to the FPGA using Quartus. Some minor changes were made from the Breadboard implementation, but the main functionality and ISA stayed the same. 
 
 To improve program writing and loading into the FPGA, I developed a Serial terminal on PyGame to write and send programs to the FPGA via a USB-Serial cable and by implementing a program loader using Serial in the FPGA. 
 
+The biggest challenges were to setup the serial communication in the FPGA in a way that it could detect where a program started. This was done by creating a "starting" sequence of two empty instructions (0x00) in a row, after that the actual program was fetched.
+
+<img alt="PyGame Terminal" src="https://github.com/dgarci23/8b-Computer/blob/main/Verilog%20Implementation/Documentation/Serial%20Terminal.PNG" width="400">
