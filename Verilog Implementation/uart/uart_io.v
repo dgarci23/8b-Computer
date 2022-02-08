@@ -41,7 +41,7 @@ module uart_io (
 		.uart_signal(w_RX_Byte),
 		.addr(addr),
 		.value(value),
-		.led()
+		.led(led)
 	);
 
 	// Drive UART line high when transmitter is not active
